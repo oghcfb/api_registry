@@ -24,7 +24,7 @@
                   "",
                   "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
                   "",
-                  "tests[\"body contains token\"] = responseBody.has(\"access_token\");",
+                  "tests[\"body contains oAuth token\"] = responseBody.has(\"access_token\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);",
