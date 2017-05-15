@@ -13,8 +13,9 @@
   "basePath": "/",
   "securityDefinitions": {
     "auth": {
-      "type": "basic",
-      "x-testValue": []
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": ""
     }
   },
   "schemes": [
@@ -27,301 +28,6 @@
     "application/json"
   ],
   "paths": {
-    "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-        "tags": [
-          "1_RestChannelService_SOAP"
-        ],
-        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "type": "object"
-            }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/oauth/token": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "Get access token",
-        "tags": [
-          "2_TokenService"
-        ],
-        "operationId": "Get access token",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "grant_type",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "cuid",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "type": "object"
-            }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/oauth/token?grant_type=client_credentials&cuid=21807516",
-              "headers": {
-                "Authorization": "Basic aWJzOmlic19zZWNyZXQ="
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Connection": "keep-alive",
-                "Content-Type": "application/json;charset=UTF-8",
-                "Date": "Thu, 11 May 2017 14:12:19 GMT",
-                "Server": "nginx",
-                "Transfer-Encoding": "chunked",
-                "X-Application-Context": "gateway:48112",
-                "X-Frame-Options": "SAMEORIGIN"
-              },
-              "body": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ\",\"token_type\":\"bearer\",\"expires_in\":3599,\"scope\":\"/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1\",\"cuid\":\"21807516\",\"jti\":\"872a1fb7-b1a1-4e2d-aaac-0184896a7cf9\"}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Get access token",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/card/setStatus": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "setStatus",
-        "tags": [
-          "CardService"
-        ],
-        "operationId": "setStatus",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/SetStatusRequest"
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/card/setStatus",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
-              },
-              "body": "{\r\n  \"cardNumber\":\"7810222228103004\",\r\n  \"status\":\"a\"\r\n} "
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "setStatus",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/card/block": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "block",
-        "tags": [
-          "CardService"
-        ],
-        "operationId": "block",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/BlockRequest"
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/card/block",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
-              },
-              "body": "{\n\t\"cardNumber\":\"7810811118101006\",\n\t\"block\": false\n}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "block",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
     "/rest/catalogs/feetype": {
       "get": {
         "description": "TODO: Add Description",
@@ -358,7 +64,7 @@
               "method": "GET",
               "uri": "/rest/catalogs/feetype",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -419,7 +125,7 @@
               "method": "GET",
               "uri": "/rest/filteredAccounts",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -436,394 +142,6 @@
             "x-testDescription": "TODO: Add Description"
           }
         ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/gateway/categories": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": ">;CG5=85 :0B53>@89 15=5D8F80@>2 8 15=5D8F80@>2",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": ">;CG5=85 :0B53>@89 15=5D8F80@>2 8 15=5D8F80@>2",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "//os-2023:7003/rest/gateway/beneficiary/{code}": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "beneficiary",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": "beneficiary",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "code",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "schema": {}
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "//os-2023:7003/rest/gateway/beneficiary/6087",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
-                "Content-Length": "487",
-                "Content-Type": "application/json",
-                "Date": "Thu, 11 May 2017 14:51:30 GMT",
-                "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
-                "Pragma": "no-cache",
-                "X-Powered-By": "Servlet/2.5 JSP/2.1"
-              },
-              "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":null,\"toDate\":null,\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.00,\"maxAmount\":15000.00,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "beneficiary",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/gateway/createPayment": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "createPayment (Beeline)",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": "createPayment (Beeline)",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/Createpayment(beeline)request"
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/gateway/confirmPayment": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "confirmPayment",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": "confirmPayment",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/ConfirmPaymentRequest"
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/gateway/confirmPayment",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
-              },
-              "body": "{  \"transactionId\" : 14219212,\n\"templateName\":\"8;09=\",\n\"otp\":\"11111111\"\n}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "confirmPayment",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/gateway/paymentDetails/1": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "paymentDetails",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": "paymentDetails",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/gateway/paymentDetails/1",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "paymentDetails",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/gateway/paymentHistory": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "paymentHistory",
-        "tags": [
-          "GatewayPaymentService"
-        ],
-        "operationId": "paymentHistory",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "startPosition",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "referenceid",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "categoryCode",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -868,7 +186,7 @@
               "method": "GET",
               "uri": "/rest/limit",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -944,7 +262,7 @@
               "uri": "/rest/limit",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n \"limits\": [{\r\n \t\"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
             },
@@ -1023,7 +341,7 @@
               "uri": "/rest/payment/ownAccounts/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{ \r\n\"accountFrom\":40817810911118101016, \r\n\"accountTo\":40817810311118101001, \r\n\"amount\":10000000000000, \r\n\"currency\":\"RUR\", \r\n\"templateName\":\"564 A2>8<8 4\" \r\n} "
             },
@@ -1102,7 +420,7 @@
               "uri": "/rest/payment/cardDpo/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{ \r\n\"accountFrom\":\"40817810911118101016\", \r\n\"targetCardNumber\":\"4166229450914210\",\r\n\"amount\":22, \r\n\"currency\":\"RUR\"\r\n} "
             },
@@ -1181,7 +499,7 @@
               "uri": "/rest/payment/fromTemplate/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n\"templateId\":22061,\r\n\"accountFrom\":\"40817810911118101016\",\r\n\"amount\":100\r\n}"
             },
@@ -1225,7 +543,7 @@
             "required": true,
             "description": "",
             "schema": {
-              "$ref": "#/definitions/Fromtemplatedpo~1createrequest18"
+              "$ref": "#/definitions/Fromtemplatedpo~1createrequest11"
             }
           },
           {
@@ -1260,7 +578,7 @@
               "uri": "/rest/payment/fromTemplateDPO/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n\"templateId\":22033,\r\n\"amount\":100,\r\n\"accountFrom\":\"40817810311118101001\",\r\n\"description\":\"123\",\r\n\"taxAmount\":200\r\n}"
             },
@@ -1339,7 +657,7 @@
               "uri": "/rest/payment/confirm",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n\t\"transactionId\":14221308,\r\n\t\"otp\":\"11111111\"\r\n}"
             },
@@ -1401,7 +719,7 @@
               "method": "GET",
               "uri": "/rest/payment/paymentTemplates",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -1470,7 +788,7 @@
               "method": "GET",
               "uri": "/rest/payment/paymentTemplateDetail?templateId=9976",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -1545,7 +863,7 @@
               "method": "GET",
               "uri": "/rest/payment/templates?bot=4.31.01.16",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ",
                 "Content-Type": "application/json"
               }
             },
@@ -1622,7 +940,7 @@
               "uri": "/rest/payment/templates",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\n    \"templateId\":22014\n}"
             },
@@ -1692,7 +1010,7 @@
               "method": "GET",
               "uri": "/rest/payment/paymentFields/?operationCode=6058",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -1783,7 +1101,7 @@
               "method": "GET",
               "uri": "/rest/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ",
                 "Content-Type": "application/json"
               }
             },
@@ -1862,7 +1180,7 @@
               "uri": "/rest/payment/templateName",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
             },
@@ -1941,7 +1259,7 @@
               "uri": "/rest/payment/sms",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\"transactionId\":14221260}"
             },
@@ -2073,7 +1391,7 @@
               "method": "GET",
               "uri": "/rest/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ",
                 "Content-Type": "application/json"
               }
             },
@@ -2149,7 +1467,7 @@
               "method": "GET",
               "uri": "/rest/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -2231,7 +1549,7 @@
               "method": "GET",
               "uri": "/rest/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -2300,7 +1618,7 @@
               "method": "GET",
               "uri": "/rest/hashtag?cuid=12345",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -2376,7 +1694,7 @@
               "uri": "/rest/hashtag",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha1\"\r\n\t\t},\r\n\t\t\t\t{\r\n\t\t\t\"hashtag\":\"martha2\"\r\n\t\t}\r\n\t]\r\n}"
             },
@@ -2453,7 +1771,7 @@
               "uri": "/rest/hashtag",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               },
               "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha\"\r\n\t\t}\r\n\t]\r\n}"
             },
@@ -2570,7 +1888,7 @@
               "method": "GET",
               "uri": "/rest/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -2686,7 +2004,7 @@
               "method": "GET",
               "uri": "/rest/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTk4NTExLCJqdGkiOiI2ZGRkMGQzNy00ZTcwLTRkNjMtYjU0NC1lMDdkNzRkMWRjNjEiLCJjbGllbnRfaWQiOiJpYnMifQ.c2baQscM9uwIRkqyafe3gPU8xB6u0C0TcxziKiH_W-qPe_Wv2H3JDXatYrf8GZnMEtmXyy-tYvVL6UcoYFeMzbCDB7QOqn6oyK9AhY--rAaA5sCHIjQP3n3Hyko2AVCRJPRrxHUalLcZvvNiaD1MhLofFW0UHiLasG2j39kSgSmDuIyme5mVRxwU50G3gmPpWAqlfTd2B8O_wzPd1np9UMoXQmskQ00Tt6E1H4nKrvo7py1KYzLM703jvfWoV5BICPUUJaUqmZgCOkbo4hKVaeQ3Y-Rq_wx8-am3cWS6bg5lNIGINEGX91sSPkmRn5ch1rUXM5o__ghulRlxqS-9qw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
               }
             },
             "expectedResponse": {
@@ -2710,203 +2028,381 @@
           "IsMultiContentStreaming": false
         }
       }
+    },
+    "/oauth/token": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "cuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy",
+              "headers": {
+                "Content-Type": "text/xml",
+                "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "//os-2023:7003/rest/gateway/beneficiary/{code}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "beneficiary",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "beneficiary",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "//os-2023:7003/rest/gateway/beneficiary/6087",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "KEYS",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Content-Length": "487",
+                "Content-Type": "application/json",
+                "Date": "Thu, 11 May 2017 14:51:30 GMT",
+                "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+                "Pragma": "no-cache",
+                "X-Powered-By": "Servlet/2.5 JSP/2.1"
+              },
+              "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":null,\"toDate\":null,\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.00,\"maxAmount\":15000.00,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "beneficiary",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/gateway/createPayment": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "createPayment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "createPayment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatePaymentRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/rest/gateway/createPayment",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
+              },
+              "body": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":6087,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "createPayment",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/gateway/confirmPayment": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "confirmPayment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "confirmPayment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ConfirmPaymentRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/rest/gateway/confirmPayment",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0ODUyMzA3LCJqdGkiOiJhNTE1OWI5Ny1hNDI4LTQ0YzUtYjIxMC0yODUyYTI0ZTM0MzkiLCJjbGllbnRfaWQiOiJpYnMifQ.O5Zxukmt1a67PnNIhWYOnyOOqDSZlzsdCtEKRXukJjVDSMWdlOa7ep40HO2DFZLKwWKzy8EftJmGIV5m0vvJlK1Tc35PihFh7qeUu9s9VGemQbH0vc2SGFiUrne2bo8Jphf1oPBN_IHJYkuZnYlA9pJVO8vPVS2mqeE7L9qdVGRg1ha3cLY7H1y_xCUKOuO6CZC9akqhzPBdvbq-6_uuOkI09jC_GZfuxzhs4YsWF3z9T5K31pck_ppR1rwO4rgXVZx6-Nsx3bBxPUXWE9XACXzS2pDZxiNwFG30aiNC3k1cmiTD_RF-mOIFfklgDssYVm48lT03U97EjHfZULkymQ"
+              },
+              "body": "{  \"transactionId\" : 14219212,\n\"templateName\":\"8;09=\",\n\"otp\":\"11111111\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "confirmPayment",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
     }
   },
   "definitions": {
-    "SetStatusRequest": {
-      "title": "setStatusRequest",
-      "type": "object",
-      "properties": {
-        "cardNumber": {
-          "description": "",
-          "type": "string"
-        },
-        "status": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "cardNumber",
-        "status"
-      ]
-    },
-    "BlockRequest": {
-      "title": "blockRequest",
-      "type": "object",
-      "properties": {
-        "cardNumber": {
-          "description": "",
-          "type": "string"
-        },
-        "block": {
-          "description": "",
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "cardNumber",
-        "block"
-      ]
-    },
-    "Createpayment(?>><5@C0@BK)request": {
-      "title": "createPayment (?> =><5@C :0@BK)Request",
-      "type": "object",
-      "properties": {
-        "amount": {
-          "description": "",
-          "type": "number",
-          "format": "double"
-        },
-        "paymentDate": {
-          "description": "",
-          "type": "string"
-        },
-        "currencyCode": {
-          "description": "",
-          "type": "string"
-        },
-        "status": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "account": {
-          "description": "",
-          "type": "string"
-        },
-        "beneficiaryCode": {
-          "description": "",
-          "type": "string"
-        },
-        "transactionID": {
-          "description": "",
-          "type": "string"
-        },
-        "fieldValues": {
-          "$ref": "#/definitions/FieldValues"
-        }
-      },
-      "required": [
-        "amount",
-        "paymentDate",
-        "currencyCode",
-        "status",
-        "account",
-        "beneficiaryCode",
-        "transactionID",
-        "fieldValues"
-      ]
-    },
-    "FieldValues": {
-      "title": "FieldValues",
-      "type": "object",
-      "properties": {
-        "cardNumber": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "cardNumber"
-      ]
-    },
-    "Createpayment(beeline)request": {
-      "title": "createPayment (Beeline)Request",
-      "type": "object",
-      "properties": {
-        "amount": {
-          "description": "",
-          "type": "number",
-          "format": "double"
-        },
-        "paymentDate": {
-          "description": "",
-          "type": "string"
-        },
-        "currencyCode": {
-          "description": "",
-          "type": "string"
-        },
-        "status": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "account": {
-          "description": "",
-          "type": "string"
-        },
-        "beneficiaryCode": {
-          "description": "",
-          "type": "string"
-        },
-        "transactionID": {
-          "description": "",
-          "type": "string"
-        },
-        "fieldValues": {
-          "$ref": "#/definitions/FieldValues5"
-        },
-        "templateName": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "amount",
-        "paymentDate",
-        "currencyCode",
-        "status",
-        "account",
-        "beneficiaryCode",
-        "transactionID",
-        "fieldValues",
-        "templateName"
-      ]
-    },
-    "FieldValues5": {
-      "title": "FieldValues5",
-      "type": "object",
-      "properties": {
-        "username": {
-          "description": "",
-          "type": "string"
-        },
-        "account": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "username",
-        "account"
-      ]
-    },
-    "ConfirmPaymentRequest": {
-      "title": "confirmPaymentRequest",
-      "type": "object",
-      "properties": {
-        "transactionId": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "templateName": {
-          "description": "",
-          "type": "string"
-        },
-        "otp": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "transactionId",
-        "templateName",
-        "otp"
-      ]
-    },
     "{{server}}/rest/limitrequest": {
       "title": "{{server}}/rest/limitRequest",
       "type": "object",
@@ -3165,8 +2661,8 @@
         "templateId"
       ]
     },
-    "Fromtemplatedpo/createrequest18": {
-      "title": "fromTemplateDPO/createRequest18",
+    "Fromtemplatedpo/createrequest11": {
+      "title": "fromTemplateDPO/createRequest11",
       "type": "object",
       "properties": {
         "templateId": {
@@ -3288,6 +2784,88 @@
         "cuid",
         "accountNumber",
         "hashtagList"
+      ]
+    },
+    "CreatePaymentRequest": {
+      "title": "createPaymentRequest",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "paymentDate": {
+          "description": "",
+          "type": "string"
+        },
+        "currencyCode": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "account": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryCode": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "fieldValues": {
+          "$ref": "#/definitions/FieldValues"
+        }
+      },
+      "required": [
+        "amount",
+        "paymentDate",
+        "currencyCode",
+        "status",
+        "account",
+        "beneficiaryCode",
+        "fieldValues"
+      ]
+    },
+    "FieldValues": {
+      "title": "FieldValues",
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cardNumber"
+      ]
+    },
+    "ConfirmPaymentRequest": {
+      "title": "confirmPaymentRequest",
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "templateName": {
+          "description": "",
+          "type": "string"
+        },
+        "otp": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "transactionId",
+        "templateName",
+        "otp"
       ]
     }
   }
