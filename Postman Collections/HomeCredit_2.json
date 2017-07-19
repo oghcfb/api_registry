@@ -2583,19 +2583,6 @@
     },
     "Fromtemplatedpo/create:Erequest": {
       "title": "fromTemplateDPO/create %Request",
-      "example": {
-        "templateId": 22025,
-        "amount": 100,
-        "accountFrom": "40817810311118101001",
-        "description": "07=0G5=85",
-        "taxAmount": null,
-        "params": {
-          "ZHKH_PROPS_KIND": "!",
-          "ZHKH_PROPS_VALUE": "1201123456",
-          "ZHKH_PAYMENT_MONTH": "05",
-          "ZHKH_PAYMENT_YEAR": "2015"
-        }
-      },
       "type": "object",
       "properties": {
         "templateId": {
