@@ -13,9 +13,8 @@
   "basePath": "/",
   "securityDefinitions": {
     "auth": {
-      "type": "oauth2",
-      "flow": "implicit",
-      "authorizationUrl": ""
+      "type": "basic",
+      "x-testValue": []
     }
   },
   "schemes": [
@@ -28,6 +27,156 @@
     "application/json"
   ],
   "paths": {
+    "/oauth/token": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "cuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "User-Agent",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "text/plain": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ\",\"token_type\":\"bearer\",\"expires_in\":3599,\"scope\":\"/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1\",\"cuid\":\"21807516\",\"jti\":\"872a1fb7-b1a1-4e2d-aaac-0184896a7cf9\"}"
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy",
+              "headers": {
+                "Content-Type": "text/xml",
+                "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
     "/rest/catalogs/feetype": {
       "get": {
         "description": "TODO: Add Description",
@@ -2018,156 +2167,6 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "deposits/transactions",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/oauth/token": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
-        "tags": [
-          "1_>43>B>28B5;L=K5 H038"
-        ],
-        "operationId": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "grant_type",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "cuid",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "User-Agent",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "type": "object"
-            },
-            "examples": {
-              "text/plain": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ\",\"token_type\":\"bearer\",\"expires_in\":3599,\"scope\":\"/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1\",\"cuid\":\"21807516\",\"jti\":\"872a1fb7-b1a1-4e2d-aaac-0184896a7cf9\"}"
-            }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-        "tags": [
-          "1_>43>B>28B5;L=K5 H038"
-        ],
-        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy",
-              "headers": {
-                "Content-Type": "text/xml",
-                "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
             "x-testDescription": "TODO: Add Description"
           }
         ],
