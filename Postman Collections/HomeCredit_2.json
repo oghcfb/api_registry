@@ -2278,6 +2278,15 @@
         ],
         "parameters": [
           {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatePaymentRequest"
+            }
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -2312,9 +2321,10 @@
               "method": "POST",
               "uri": "/rest/gateway/createPayment",
               "headers": {
-                "Authorization": "Bearer undefined",
-                "Content-Type": "application/json"
-              }
+                "Content-Type": "application/json",
+                "Authorization": "Bearer undefined"
+              },
+              "body": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":6087,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2878,6 +2888,75 @@
         "cuid",
         "accountNumber",
         "hashtagList"
+      ]
+    },
+    "CreatePaymentRequest": {
+      "title": "createPaymentRequest",
+      "example": {
+        "amount": 11.11,
+        "paymentDate": "1486328400000",
+        "currencyCode": "RUR",
+        "status": 0,
+        "account": "40817810911118101016",
+        "beneficiaryCode": 6087,
+        "fieldValues": {
+          "cardNumber": "4704515446716803"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "amount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "paymentDate": {
+          "description": "",
+          "type": "string"
+        },
+        "currencyCode": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "account": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryCode": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "fieldValues": {
+          "$ref": "#/definitions/FieldValues"
+        }
+      },
+      "required": [
+        "amount",
+        "paymentDate",
+        "currencyCode",
+        "status",
+        "account",
+        "beneficiaryCode",
+        "fieldValues"
+      ]
+    },
+    "FieldValues": {
+      "title": "FieldValues",
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cardNumber"
       ]
     },
     "ConfirmPaymentRequest": {
