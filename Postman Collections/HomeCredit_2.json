@@ -9,8 +9,8 @@
       "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
     }
   },
-  "host": "example.com",
-  "basePath": "/",
+  "host": "balancer-gateway-it-test2.omni.homecredit.ru:8112",
+  "basePath": "/oauth",
   "securityDefinitions": {
     "auth": {
       "type": "basic",
@@ -19,7 +19,7 @@
     }
   },
   "schemes": [
-    "http"
+    "https"
   ],
   "consumes": [
     "application/json"
@@ -28,7 +28,7 @@
     "application/json"
   ],
   "paths": {
-    "/oauth/token": {
+    "/token": {
       "post": {
         "description": "TODO: Add Description",
         "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
@@ -109,7 +109,7 @@
         }
       }
     },
-    "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy": {
+    "/ClientRelatedWSProxy": {
       "post": {
         "description": "TODO: Add Description",
         "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
@@ -150,7 +150,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy",
+              "uri": "/ClientRelatedWSProxy",
               "headers": {
                 "Content-Type": "text/xml",
                 "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
@@ -178,7 +178,7 @@
         }
       }
     },
-    "/rest/catalogs/feetype": {
+    "/catalogs/feetype": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "catalogs",
@@ -212,7 +212,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/catalogs/feetype",
+              "uri": "/catalogs/feetype",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -239,7 +239,7 @@
         }
       }
     },
-    "/rest/filteredAccounts": {
+    "/filteredAccounts": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "filteredAccounts",
@@ -273,7 +273,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/filteredAccounts",
+              "uri": "/filteredAccounts",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -300,7 +300,7 @@
         }
       }
     },
-    "/rest/limit": {
+    "/limit": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "limit",
@@ -334,7 +334,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/limit",
+              "uri": "/limit",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -409,7 +409,7 @@
           {
             "request": {
               "method": "PUT",
-              "uri": "/rest/limit",
+              "uri": "/limit",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -438,7 +438,7 @@
         }
       }
     },
-    "/rest/payment/ownAccounts/create": {
+    "/payment/ownAccounts/create": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "ownAccounts/create",
@@ -488,7 +488,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/payment/ownAccounts/create",
+              "uri": "/payment/ownAccounts/create",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -517,7 +517,7 @@
         }
       }
     },
-    "/rest/payment/cardDpo/create": {
+    "/payment/cardDpo/create": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "cardDpo/create",
@@ -567,7 +567,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/payment/cardDpo/create",
+              "uri": "/payment/cardDpo/create",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -596,7 +596,7 @@
         }
       }
     },
-    "/rest/payment/fromTemplate/create": {
+    "/payment/fromTemplate/create": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "fromTemplate/create",
@@ -646,7 +646,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/payment/fromTemplate/create",
+              "uri": "/payment/fromTemplate/create",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -675,7 +675,7 @@
         }
       }
     },
-    "/rest/payment/fromTemplateDPO/create": {
+    "/payment/fromTemplateDPO/create": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "fromTemplateDPO/create1",
@@ -725,7 +725,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/payment/fromTemplateDPO/create",
+              "uri": "/payment/fromTemplateDPO/create",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -754,7 +754,7 @@
         }
       }
     },
-    "/rest/payment/confirm": {
+    "/payment/confirm": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "confirm",
@@ -804,7 +804,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/payment/confirm",
+              "uri": "/payment/confirm",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -833,7 +833,7 @@
         }
       }
     },
-    "/rest/payment/paymentTemplates": {
+    "/payment/paymentTemplates": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "paymentTemplates",
@@ -867,7 +867,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/payment/paymentTemplates",
+              "uri": "/payment/paymentTemplates",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -894,7 +894,7 @@
         }
       }
     },
-    "/rest/payment/paymentTemplateDetail": {
+    "/payment/paymentTemplateDetail": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "paymentTemplateDetail",
@@ -936,7 +936,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/payment/paymentTemplateDetail?templateId=9976",
+              "uri": "/payment/paymentTemplateDetail?templateId=9976",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -963,7 +963,7 @@
         }
       }
     },
-    "/rest/payment/templates": {
+    "/payment/templates": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "templates",
@@ -1011,7 +1011,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/payment/templates?bot=4.31.01.16",
+              "uri": "/payment/templates?bot=4.31.01.16",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
                 "Content-Type": "application/json"
@@ -1087,7 +1087,7 @@
           {
             "request": {
               "method": "DELETE",
-              "uri": "/rest/payment/templates",
+              "uri": "/payment/templates",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -1116,7 +1116,7 @@
         }
       }
     },
-    "/rest/payment/paymentFields/": {
+    "/payment/paymentFields/": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "paymentFields",
@@ -1158,7 +1158,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/payment/paymentFields/?operationCode=6058",
+              "uri": "/payment/paymentFields/?operationCode=6058",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -1185,7 +1185,249 @@
         }
       }
     },
-    "/rest/payment/paymentHistory": {
+    "/payment/paymentHistory": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentHistory",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentHistory",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "businessObjectType",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentHistory",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/templateName": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "templateName",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "templateName",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TemplateNameRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/templateName",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+              },
+              "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "templateName",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/sms": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "payment/sms",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "payment/sms",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Payment~1smsrequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/sms",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+              },
+              "body": "{\"transactionId\":14221260}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "payment/sms",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/paymentHistory": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "paymentHistory copy",
@@ -1249,7 +1491,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
+              "uri": "/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
                 "Content-Type": "application/json"
@@ -1277,165 +1519,7 @@
         }
       }
     },
-    "/rest/payment/templateName": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "templateName",
-        "tags": [
-          "PaymentService"
-        ],
-        "operationId": "templateName",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/TemplateNameRequest"
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/payment/templateName",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
-              },
-              "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "templateName",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/payment/sms": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "payment/sms",
-        "tags": [
-          "PaymentService"
-        ],
-        "operationId": "payment/sms",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/Payment~1smsrequest"
-            }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/payment/sms",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
-              },
-              "body": "{\"transactionId\":14221260}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "payment/sms",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/creditCards/transactions": {
+    "/creditCards/transactions": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "creditCardsTransactions",
@@ -1539,7 +1623,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
+              "uri": "/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
                 "Content-Type": "application/json"
@@ -1567,7 +1651,7 @@
         }
       }
     },
-    "/rest/debitCards/detail": {
+    "/debitCards/detail": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "debitCardDetails",
@@ -1615,7 +1699,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
+              "uri": "/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -1642,7 +1726,7 @@
         }
       }
     },
-    "/rest/deposits/detail": {
+    "/deposits/detail": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "deposits/detail",
@@ -1697,7 +1781,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
+              "uri": "/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -1724,7 +1808,7 @@
         }
       }
     },
-    "/rest/hashtag": {
+    "/hashtag": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "getHashtag",
@@ -1766,7 +1850,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/hashtag?cuid=12345",
+              "uri": "/hashtag?cuid=12345",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -1841,7 +1925,7 @@
           {
             "request": {
               "method": "PUT",
-              "uri": "/rest/hashtag",
+              "uri": "/hashtag",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -1918,7 +2002,7 @@
           {
             "request": {
               "method": "DELETE",
-              "uri": "/rest/hashtag",
+              "uri": "/hashtag",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -1947,7 +2031,7 @@
         }
       }
     },
-    "/rest/debitCards/transactions": {
+    "/debitCards/transactions": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "debitCards/transactions",
@@ -2036,7 +2120,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
+              "uri": "/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -2063,7 +2147,7 @@
         }
       }
     },
-    "/rest/deposits/transactions": {
+    "/deposits/transactions": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "deposits/transactions",
@@ -2152,7 +2236,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
+              "uri": "/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -2179,7 +2263,7 @@
         }
       }
     },
-    "//os-2023:7003/rest/gateway/beneficiary/{code}": {
+    "/{code}": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "beneficiary",
@@ -2230,7 +2314,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "//os-2023:7003/rest/gateway/beneficiary/6087",
+              "uri": "/6087",
               "headers": {
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
               }
@@ -2266,7 +2350,7 @@
         }
       }
     },
-    "/rest/gateway/createPayment": {
+    "/gateway/createPayment": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "createPayment",
@@ -2320,7 +2404,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/gateway/createPayment",
+              "uri": "/gateway/createPayment",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
@@ -2349,7 +2433,7 @@
         }
       }
     },
-    "/rest/gateway/confirmPayment": {
+    "/gateway/confirmPayment": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "confirmPayment",
@@ -2399,7 +2483,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/rest/gateway/confirmPayment",
+              "uri": "/gateway/confirmPayment",
               "headers": {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
