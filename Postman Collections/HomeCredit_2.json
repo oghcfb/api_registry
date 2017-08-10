@@ -14,7 +14,6 @@
   "securityDefinitions": {
     "auth": {
       "type": "basic",
-      "flow": "implicit",
       "x-testValue": []
     }
   },
@@ -53,27 +52,6 @@
             "required": true,
             "type": "integer",
             "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "User-Agent",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
             "description": ""
           },
           {
@@ -2363,15 +2341,6 @@
         ],
         "parameters": [
           {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/CreatePaymentRequest"
-            }
-          },
-          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -2406,10 +2375,9 @@
               "method": "POST",
               "uri": "/gateway/createPayment",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
-              },
-              "body": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":6087,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
+                "Content-Type": "application/json"
+              }
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2973,75 +2941,6 @@
         "cuid",
         "accountNumber",
         "hashtagList"
-      ]
-    },
-    "CreatePaymentRequest": {
-      "title": "createPaymentRequest",
-      "example": {
-        "amount": 11.11,
-        "paymentDate": "1486328400000",
-        "currencyCode": "RUR",
-        "status": 0,
-        "account": "40817810911118101016",
-        "beneficiaryCode": 6087,
-        "fieldValues": {
-          "cardNumber": "4704515446716803"
-        }
-      },
-      "type": "object",
-      "properties": {
-        "amount": {
-          "description": "",
-          "type": "number",
-          "format": "double"
-        },
-        "paymentDate": {
-          "description": "",
-          "type": "string"
-        },
-        "currencyCode": {
-          "description": "",
-          "type": "string"
-        },
-        "status": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "account": {
-          "description": "",
-          "type": "string"
-        },
-        "beneficiaryCode": {
-          "description": "",
-          "type": "integer",
-          "format": "int32"
-        },
-        "fieldValues": {
-          "$ref": "#/definitions/FieldValues"
-        }
-      },
-      "required": [
-        "amount",
-        "paymentDate",
-        "currencyCode",
-        "status",
-        "account",
-        "beneficiaryCode",
-        "fieldValues"
-      ]
-    },
-    "FieldValues": {
-      "title": "FieldValues",
-      "type": "object",
-      "properties": {
-        "cardNumber": {
-          "description": "",
-          "type": "string"
-        }
-      },
-      "required": [
-        "cardNumber"
       ]
     },
     "ConfirmPaymentRequest": {
