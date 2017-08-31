@@ -66,10 +66,17 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/>;CG5=85">:5=0>O>ABC?0!5@28A0<response"
             },
             "examples": {
-              "text/plain": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ\",\"token_type\":\"bearer\",\"expires_in\":3599,\"scope\":\"/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1\",\"cuid\":\"21807516\",\"jti\":\"872a1fb7-b1a1-4e2d-aaac-0184896a7cf9\"}"
+              "application/json": {
+                "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
+                "token_type": "bearer",
+                "expires_in": 3599,
+                "scope": "/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1",
+                "cuid": "21807516",
+                "jti": "872a1fb7-b1a1-4e2d-aaac-0184896a7cf9"
+              }
             }
           }
         },
@@ -671,7 +678,7 @@
             "required": true,
             "description": "",
             "schema": {
-              "$ref": "#/definitions/Fromtemplatedpo~1createrequest11"
+              "$ref": "#/definitions/Fromtemplatedpo~1createrequest12"
             }
           },
           {
@@ -2272,11 +2279,9 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/BeneficiaryResponse"
             },
-            "examples": {
-              "text/plain": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":null,\"toDate\":null,\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.00,\"maxAmount\":15000.00,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
-            }
+            "examples": {}
           },
           "400": {
             "description": "Bad Request",
@@ -2288,38 +2293,7 @@
             "auth": []
           }
         ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/6087",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
-                "Content-Length": "487",
-                "Content-Type": "application/json",
-                "Date": "Thu, 11 May 2017 14:51:30 GMT",
-                "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
-                "Pragma": "no-cache",
-                "X-Powered-By": "Servlet/2.5 JSP/2.1"
-              },
-              "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":null,\"toDate\":null,\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.00,\"maxAmount\":15000.00,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "beneficiary",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
+        "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2482,6 +2456,53 @@
     }
   },
   "definitions": {
+    ">;CG5=85">:5=0>O>ABC?0!5@28A0<response": {
+      "title": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<Response",
+      "example": {
+        "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
+        "token_type": "bearer",
+        "expires_in": 3599,
+        "scope": "/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1",
+        "cuid": "21807516",
+        "jti": "872a1fb7-b1a1-4e2d-aaac-0184896a7cf9"
+      },
+      "type": "object",
+      "properties": {
+        "access_token": {
+          "description": "",
+          "type": "string"
+        },
+        "token_type": {
+          "description": "",
+          "type": "string"
+        },
+        "expires_in": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "scope": {
+          "description": "",
+          "type": "string"
+        },
+        "cuid": {
+          "description": "",
+          "type": "string"
+        },
+        "jti": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "access_token",
+        "token_type",
+        "expires_in",
+        "scope",
+        "cuid",
+        "jti"
+      ]
+    },
     "{{server}}/rest/limitrequest": {
       "title": "{{server}}/rest/limitRequest",
       "example": {
@@ -2780,8 +2801,8 @@
         "templateId"
       ]
     },
-    "Fromtemplatedpo/createrequest11": {
-      "title": "fromTemplateDPO/createRequest11",
+    "Fromtemplatedpo/createrequest12": {
+      "title": "fromTemplateDPO/createRequest12",
       "example": {
         "templateId": 22033,
         "amount": 100,
@@ -2941,6 +2962,119 @@
         "cuid",
         "accountNumber",
         "hashtagList"
+      ]
+    },
+    "BeneficiaryResponse": {
+      "title": "beneficiaryResponse",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryCode": {
+          "description": "",
+          "type": "string"
+        },
+        "fromDate": {
+          "description": "",
+          "type": "string"
+        },
+        "toDate": {
+          "description": "",
+          "type": "string"
+        },
+        "rapidaCode": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryAccountId": {
+          "description": "",
+          "type": "string"
+        },
+        "minAmount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "maxAmount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "disclaimer": {
+          "description": "",
+          "type": "string"
+        },
+        "fields": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Field"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "status",
+        "categoryCode",
+        "fromDate",
+        "toDate",
+        "rapidaCode",
+        "beneficiaryAccountId",
+        "minAmount",
+        "maxAmount",
+        "disclaimer",
+        "fields"
+      ]
+    },
+    "Field": {
+      "title": "Field",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "regexp": {
+          "description": "",
+          "type": "string"
+        },
+        "tooltip": {
+          "description": "",
+          "type": "string"
+        },
+        "fieldType": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "mapping": {
+          "description": "",
+          "type": "string"
+        },
+        "enumValues": {
+          "description": "",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "regexp",
+        "tooltip",
+        "fieldType",
+        "mapping",
+        "enumValues"
       ]
     },
     "ConfirmPaymentRequest": {
