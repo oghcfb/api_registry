@@ -199,7 +199,7 @@
               "method": "GET",
               "uri": "/catalogs/feetype",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -260,7 +260,7 @@
               "method": "GET",
               "uri": "/filteredAccounts",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -321,7 +321,7 @@
               "method": "GET",
               "uri": "/limit",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -397,7 +397,7 @@
               "uri": "/limit",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n \"limits\": [{\r\n \t\"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
             },
@@ -476,7 +476,7 @@
               "uri": "/payment/ownAccounts/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{ \r\n\"accountFrom\":40817810911118101016, \r\n\"accountTo\":40817810311118101001, \r\n\"amount\":10000000000000, \r\n\"currency\":\"RUR\", \r\n\"templateName\":\"564 A2>8<8 4\" \r\n} "
             },
@@ -555,7 +555,7 @@
               "uri": "/payment/cardDpo/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{ \r\n\"accountFrom\":\"40817810911118101016\", \r\n\"targetCardNumber\":\"4166229450914210\",\r\n\"amount\":22, \r\n\"currency\":\"RUR\"\r\n} "
             },
@@ -634,7 +634,7 @@
               "uri": "/payment/fromTemplate/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n\"templateId\":22061,\r\n\"accountFrom\":\"40817810911118101016\",\r\n\"amount\":100\r\n}"
             },
@@ -713,7 +713,7 @@
               "uri": "/payment/fromTemplateDPO/create",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n\"templateId\":22033,\r\n\"amount\":100,\r\n\"accountFrom\":\"40817810311118101001\",\r\n\"description\":\"123\",\r\n\"taxAmount\":200\r\n}"
             },
@@ -792,7 +792,7 @@
               "uri": "/payment/confirm",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n\t\"transactionId\":14221308,\r\n\t\"otp\":\"11111111\"\r\n}"
             },
@@ -854,7 +854,7 @@
               "method": "GET",
               "uri": "/payment/paymentTemplates",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -923,7 +923,7 @@
               "method": "GET",
               "uri": "/payment/paymentTemplateDetail?templateId=9976",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -998,7 +998,7 @@
               "method": "GET",
               "uri": "/payment/templates?bot=4.31.01.16",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg",
                 "Content-Type": "application/json"
               }
             },
@@ -1075,7 +1075,7 @@
               "uri": "/payment/templates",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\n    \"templateId\":22014\n}"
             },
@@ -1145,7 +1145,7 @@
               "method": "GET",
               "uri": "/payment/paymentFields/?operationCode=6058",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -1229,7 +1229,7 @@
               "method": "GET",
               "uri": "/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -1307,7 +1307,7 @@
               "uri": "/payment/templateName",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
             },
@@ -1386,7 +1386,7 @@
               "uri": "/payment/sms",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\"transactionId\":14221260}"
             },
@@ -1478,7 +1478,7 @@
               "method": "GET",
               "uri": "/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg",
                 "Content-Type": "application/json"
               }
             },
@@ -1610,7 +1610,7 @@
               "method": "GET",
               "uri": "/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg",
                 "Content-Type": "application/json"
               }
             },
@@ -1686,7 +1686,7 @@
               "method": "GET",
               "uri": "/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -1768,7 +1768,7 @@
               "method": "GET",
               "uri": "/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -1837,7 +1837,7 @@
               "method": "GET",
               "uri": "/hashtag?cuid=12345",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -1913,7 +1913,7 @@
               "uri": "/hashtag",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha1\"\r\n\t\t},\r\n\t\t\t\t{\r\n\t\t\t\"hashtag\":\"martha2\"\r\n\t\t}\r\n\t]\r\n}"
             },
@@ -1990,7 +1990,7 @@
               "uri": "/hashtag",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha\"\r\n\t\t}\r\n\t]\r\n}"
             },
@@ -2107,7 +2107,7 @@
               "method": "GET",
               "uri": "/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -2223,7 +2223,7 @@
               "method": "GET",
               "uri": "/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               }
             },
             "expectedResponse": {
@@ -2315,6 +2315,15 @@
         ],
         "parameters": [
           {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatePaymentRequest"
+            }
+          },
+          {
             "name": "Authorization",
             "in": "header",
             "required": true,
@@ -2349,9 +2358,10 @@
               "method": "POST",
               "uri": "/gateway/createPayment",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw",
-                "Content-Type": "application/json"
-              }
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
+              },
+              "body": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":6087,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2428,7 +2438,7 @@
               "uri": "/gateway/confirmPayment",
               "headers": {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiLCIvdHJhbnNmZXIvdjEiXSwiZXhwIjoxNTAxMjMyODkwLCJqdGkiOiI5ZTFlMDBiNC01YmY1LTQ3NTEtOTg2MC04OTRlOWUyNzIxMzciLCJjbGllbnRfaWQiOiJpYnMifQ.HiAH1BZBbF2q0v-a5Tn6cS49Z8seN4og03qPqrTgTnKWyGlT9ICZ1yRT2yfqaHm9H7sqfNglvaDwNmOLREEjsB3n7XRtY2gY-yhtn7chdoSJzKbovtLHWK-4znUXGSa9nSb5GMH7b3z5NerJ2JnBTRCfl7jQ0ZPFL0uHPMt4dIcBWqBaqsmscX6J-zY5NfC8qpwEY6r-FvC_nHCGR8IOQkYeaY7TWMNiDwrw11aBrCVg7qECkEQLDHSzU6BTNisxEkQ9mpu3dhk6WdBUZgCTEXdvk1Ii4LY0lOpsCN7-zSP4Z2k1lu2pS2mpD_4GIjedTKOYwzOlMLlptDL-uLAvEw"
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIl0sImV4cCI6MTUwNTc0ODk1MywianRpIjoiNWFkOGQ3NDctM2FiMy00NjdiLWE5ODUtZGRmYTg3ZGY0MWVmIiwiY2xpZW50X2lkIjoiaWJzIn0.L4thC7bzYrcUFTUnzCl0ovb4vq0eiTo4xY2cYZBTi5zqCIaok9Rffi4q2xXkTr0MMAPIzUKehSBA59pw_VtMx8mhHEym7Xw7GLcQKiWZdXFcTrVV18lRaVfQLxgDGnbMqLOaGyfCn8t9oCA4TwQ6YUTEXDOkKGZB9wMCXjh_0mBmgYc5wlj6mVdsE6i4r0vDRFhLYUBkmiHeojcIqarXm6eC-BnPV8tE3PoUWOIyZQ8tcPZU7PER7qcK2P7bxuwRBQ_YPlO4i-FFKKGxmA6gjnSEFDK2xn7XXtvFPA76nHBBxEUAAIeltu-4H-EBxYhOXsE8mcCIRBX6-RngOqWZDg"
               },
               "body": "{  \"transactionId\" : 14219212,\n\"templateName\":\"8;09=\",\n\"otp\":\"11111111\"\n}"
             },
@@ -3075,6 +3085,75 @@
         "fieldType",
         "mapping",
         "enumValues"
+      ]
+    },
+    "CreatePaymentRequest": {
+      "title": "createPaymentRequest",
+      "example": {
+        "amount": 11.11,
+        "paymentDate": "1486328400000",
+        "currencyCode": "RUR",
+        "status": 0,
+        "account": "40817810911118101016",
+        "beneficiaryCode": 6087,
+        "fieldValues": {
+          "cardNumber": "4704515446716803"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "amount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "paymentDate": {
+          "description": "",
+          "type": "string"
+        },
+        "currencyCode": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "account": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryCode": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "fieldValues": {
+          "$ref": "#/definitions/FieldValues"
+        }
+      },
+      "required": [
+        "amount",
+        "paymentDate",
+        "currencyCode",
+        "status",
+        "account",
+        "beneficiaryCode",
+        "fieldValues"
+      ]
+    },
+    "FieldValues": {
+      "title": "FieldValues",
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cardNumber"
       ]
     },
     "ConfirmPaymentRequest": {
