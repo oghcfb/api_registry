@@ -188,11 +188,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -249,11 +245,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -310,11 +302,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -385,11 +373,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -464,11 +448,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -543,11 +523,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -622,11 +598,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -701,11 +673,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -780,11 +748,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -843,11 +807,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -912,11 +872,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -987,11 +943,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1063,11 +1015,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1134,11 +1082,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1218,11 +1162,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1295,11 +1235,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1374,11 +1310,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1467,11 +1399,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1599,11 +1527,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1675,11 +1599,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1757,11 +1677,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1826,11 +1742,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1901,11 +1813,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -1978,11 +1886,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -2096,11 +2000,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -2212,11 +2112,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -2288,11 +2184,7 @@
             "schema": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -2347,11 +2239,7 @@
             "schema": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
@@ -2426,11 +2314,7 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
+        "security": [],
         "x-unitTests": [
           {
             "request": {
