@@ -2209,7 +2209,38 @@
           }
         },
         "security": [],
-        "x-unitTests": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/gateway/beneficiary/6087",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Content-Length": "487",
+                "Content-Type": "application/json",
+                "Date": "Thu, 11 May 2017 14:51:30 GMT",
+                "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+                "Pragma": "no-cache",
+                "X-Powered-By": "Servlet/2.5 JSP/2.1"
+              },
+              "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":\"null\",\"toDate\":\"null\",\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.0,\"maxAmount\":15000.0,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "beneficiary",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
