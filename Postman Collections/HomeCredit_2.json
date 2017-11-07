@@ -1,1564 +1,3164 @@
 {
-  "variables": [],
+  "swagger": "2.0",
   "info": {
-    "name": "HomeCredit 2",
-    "_postman_id": "1122592-7c6c1e34-9829-5b03-5172-71cafb87601a",
-    "description": "",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "_postman_id": "1122592-9b7b3679-8db9-4b5e-db29-aa13b5a8198e",
-      "name": "1_>43>B>28B5;L=K5 H038",
-      "description": "-B8 H038 =5>1E>48<> 2K?>;=8BL  2K7>20 ;N1>3> REST A5@28A0 IBS.\n\n-B> 5ABL:\n1. ?@>25@:0 - 0:B820F8O :0=0;0 REST C 40==>3> :;85=B0. ?@>2>48BAO 2 A8AB5<5 IBS, G5@57 SOAP A5@28A\n2. ?>;CG5=85 oAuth2 B>:5=0 4;O 40==>3> :;85=B0, :>B>@K9 1C45B 8A?>;L720BLAO 2 ?@F5AA5 02B>@870F88 ?@8 ;N1>< 4>ABC?5 : REST A5@28A0< IBS\n\n",
-      "item": [
-        {
-          "_postman_id": "1122592-4de8b063-2337-e833-4b63-2a724292ca83",
-          "name": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
-                  "",
-                  "tests[\"body contains oAuth token\"] = responseBody.has(\"access_token\");",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"oauth_token\", jsonData.access_token);",
-                  "",
-                  "",
-                  "postman.setEnvironmentVariable(\"token\", \"Bearer \"+jsonData.access_token);",
-                  "postman.setEnvironmentVariable(\"token\", \"Bearer \"+jsonData.access_token);",
-                  "postman.setEnvironmentVariable(\"token\", \"Bearer \"+jsonData.access_token);",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "auth": {
-              "type": "basic",
-              "basic": {
-                "username": "ibs",
-                "password": "ibs_secret",
-                "saveHelperData": true,
-                "showPassword": false
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded; charset=UTF-8",
-                "disabled": true
-              },
-              {
-                "key": "User-Agent",
-                "value": "Test Partner Backend",
-                "disabled": true
-              },
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "disabled": true
-              },
-              {
-                "key": "Authorization",
-                "value": "Basic aWJzOmlic19zZWNyZXQ="
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "disabled": false,
-                  "key": "grant_type",
-                  "value": "client_credentials",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": {
-              "raw": "https://balancer-gateway-it-test2.omni.homecredit.ru:8112/oauth/token?grant_type=client_credentials&cuid=21807516",
-              "host": [
-                "https://balancer-gateway-it-test2.omni.homecredit.ru:8112"
-              ],
-              "path": [
-                "oauth",
-                "token"
-              ],
-              "query": [
-                {
-                  "key": "grant_type",
-                  "value": "client_credentials"
-                },
-                {
-                  "key": "cuid",
-                  "value": "21807516"
-                }
-              ]
-            },
-            "description": "All API calls use OAuth2 Client Credentials Flow, see http://tools.ietf.org/html/rfc6749#section-4.4\n\nAny request must contain valid OAuth2 token, that must be obtained via Access Token Request http://tools.ietf.org/html/rfc6749#section-4.4.2 This should be implemented in Oauth2 libraries for any language/framework.\n\nBasic auth is used as credentials to obtain token. Each partner has its own login/password for that. Sample partner account was created for testing purposes. Login: test_partner, password: test_partner_secret."
-          },
-          "response": [
-            {
-              "id": "1122592-1bb3230a-d206-92a6-95aa-abea79e92e09",
-              "name": "200",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json;charset=UTF-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 11 May 2017 14:12:19 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": ""
-                },
-                {
-                  "key": "X-Application-Context",
-                  "value": "gateway:48112",
-                  "name": "X-Application-Context",
-                  "description": ""
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3685",
-              "body": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ\",\"token_type\":\"bearer\",\"expires_in\":3599,\"scope\":\"/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1\",\"cuid\":\"21807516\",\"jti\":\"872a1fb7-b1a1-4e2d-aaac-0184896a7cf9\"}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "1122592-2247c8d6-bc34-0bd5-5c8b-98bc2e0058fa",
-          "name": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "auth": {
-              "type": "basic",
-              "basic": {
-                "username": "osbru_for_mob",
-                "password": "osbru_for_mob",
-                "saveHelperData": true,
-                "showPassword": false
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "text/xml"
-              },
-              {
-                "key": "Authorization",
-                "value": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://gemini.bsc.cz/ws/ClientRelated/\"> \n   <soapenv:Header/> \n   <soapenv:Body> \n      <cli:modifyRestChannel> \n         <modifyRestChannelRequest> \n            <cuid>21807516</cuid> \n            <status>1</status> \n         </modifyRestChannelRequest> \n      </cli:modifyRestChannel> \n   </soapenv:Body> \n</soapenv:Envelope> "
-            },
-            "url": "https://osb-srv-test7.homecredit.ru/ConsumerSystem/HCFB/MOB/ClientRelated/ProxyService/ClientRelatedWSProxy",
-            "description": ">ABC? : REST A5@28A0< IBS ?>72>;5= A =0@C68 B>;L:> B5< :;85=B0<, :>B>@K5 8<5NB 0:B828@>= :0=0; REST.\n0==K9 A5@28A 8A?>;L7C5BAO 4;O 0:B820F88 / 450:B820F88 :0=0;0 REST :>=:@5B=>3> :;85=B0."
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-1765a380-96e0-877a-667a-0a64372acfd7",
-      "name": "2_!>740=85 =>2>3> ?;0B560 ?>;=K9 ?@>F5AA",
-      "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "1122592-ca42b055-942c-f792-75e1-818c9abf9a1a",
-      "name": "CatalogService",
-      "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C",
-      "item": [
-        {
-          "_postman_id": "1122592-3a0b6e48-009c-30df-14c5-1d7e5cc5e586",
-          "name": "catalogs",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {},
-            "url": "http://os-2023:7003/rest/catalogs/feetype",
-            "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C\nPRODUCTTYPE - :>4 :0B0;>30 87 GFO_CATALOGTYPE, <>65B 1KBL ;N1K<\n\n@>25@:0 7=0G5=89 ?> >B25BC <>6=> ?@>25@8BL 2 04<8=:5 (4<8=8AB@8@>20=85/!?@02>G=8:8/0B0;>3 (K1@0BL 87 2K?040NI53> A?8A:0))"
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-c9ed9fa0-170d-64be-7240-f47e95540a65",
-      "name": "CoreAccountService",
-      "description": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : ",
-      "item": [
-        {
-          "_postman_id": "1122592-10a41752-3612-ca92-fdcd-152aa98becf1",
-          "name": "filteredAccounts",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "http://os-2023:7003/rest/filteredAccounts",
-            "description": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : "
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-d383b175-b93a-9f86-cab1-8b137cda1f67",
-      "name": "Limits",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "1122592-7a10764b-7217-7b19-535d-1fef0cac2d16",
-          "name": "limit",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "http://os-2023:7003/rest/limit",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-3042268c-285e-6332-4dc6-50f2267a1e47",
-          "name": "{{server}}/rest/limit",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n \"limits\": [{\r\n \t\"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
-            },
-            "url": "http://os-2023:7003/rest/limit",
-            "description": ""
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-84d593b5-dbd1-3c75-7f78-152257be4a34",
-      "name": "PaymentService",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "1122592-13b716d3-10f0-cfeb-0475-b0b76f3bafeb",
-          "name": "ownAccounts/create",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \r\n\"accountFrom\":40817810911118101016, \r\n\"accountTo\":40817810311118101001, \r\n\"amount\":10000000000000, \r\n\"currency\":\"RUR\", \r\n\"templateName\":\"564 A2>8<8 4\" \r\n} "
-            },
-            "url": "http://os-2023:7003/rest/payment/ownAccounts/create",
-            "description": "!>740=85 ?5@52>40 <564C A2>8<8 AG5B0<8 (2>7<>6=> A A>E@0=5=85< H01;>=0)"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-5f9e73f7-47e4-7e75-c228-1dba6622747c",
-          "name": "cardDpo/create",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \r\n\"accountFrom\":\"40817810911118101016\", \r\n\"targetCardNumber\":\"4166229450914210\",\r\n\"amount\":22, \r\n\"currency\":\"RUR\"\r\n} "
-            },
-            "url": "http://os-2023:7003/rest/payment/cardDpo/create",
-            "description": "!>740=85 ?5@52>40 ?> =><5@C :0@BK G5@57 !-"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-494bc2d2-9b12-81e6-e0bb-2dbec6b7b653",
-          "name": "fromTemplate/create",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\"templateId\":22061,\r\n\"accountFrom\":\"40817810911118101016\",\r\n\"amount\":100\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/fromTemplate/create",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-cb385f54-6836-943f-72d3-a1e9484482cf",
-          "name": "fromTemplateDPO/create %",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{incorrect_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\"templateId\":22025,\r\n\"amount\":100,\r\n\"accountFrom\":\"40817810311118101001\",\r\n\"description\":\"07=0G5=85\",\r\n\"taxAmount\":null,\r\n\"params\":{ \r\n\"ZHKH_PROPS_KIND\":\"!\", \r\n\"ZHKH_PROPS_VALUE\":\"1201123456\", \r\n\"ZHKH_PAYMENT_MONTH\":\"05\", \r\n\"ZHKH_PAYMENT_YEAR\":\"2015\" \r\n}\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/fromTemplateDPO/create",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-f5c3aeb2-b7c7-a5b8-dcef-6511e5e3c087",
-          "name": "confirm",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"transactionId\":14221308,\r\n\t\"otp\":\"11111111\"\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/confirm",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-a48db785-3b01-0396-603d-6b89ab2f2f3f",
-          "name": "paymentTemplates",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "http://os-2023:7003/rest/payment/paymentTemplates",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-62598687-ba4f-b7db-4cf4-466b5533206b",
-          "name": "paymentTemplateDetail",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/payment/paymentTemplateDetail?templateId=9976",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "payment",
-                "paymentTemplateDetail"
-              ],
-              "query": [
-                {
-                  "key": "templateId",
-                  "value": "9976"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-68df11b7-74d4-6549-5bdd-138c67059469",
-          "name": "templates",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"id\":21976, \"bot\":\"4.31.01.16\", \"withDetails\":\"true\"}"
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/payment/templates?bot=4.31.01.16",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "payment",
-                "templates"
-              ],
-              "query": [
-                {
-                  "key": "bot",
-                  "value": "4.31.01.16"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-82deeb1a-217f-64df-a15c-8fb491b8bbef",
-          "name": "paymentFields",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{incorrect_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/payment/paymentFields/?operationCode=6058",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "payment",
-                "paymentFields",
-                ""
-              ],
-              "query": [
-                {
-                  "key": "operationCode",
-                  "value": "6058"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-54a6cc44-8c08-648a-a390-8403eae358d4",
-          "name": "paymentHistory",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{incorrect_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "payment",
-                "paymentHistory"
-              ],
-              "query": [
-                {
-                  "key": "startPosition",
-                  "value": "0"
-                },
-                {
-                  "key": "count",
-                  "value": "10"
-                },
-                {
-                  "key": "businessObjectType",
-                  "value": "4.31.01.06"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-b44de0b9-d1a9-233f-6d02-e617d31901b9",
-          "name": "templateName",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/templateName",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-4dd79c31-b0b8-649d-f5b4-3706cbcaada7",
-          "name": "payment/sms",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"transactionId\":14221260}"
-            },
-            "url": "http://os-2023:7003/rest/payment/sms",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-e34fabbc-e42f-bb4d-318d-ac8045986465",
-          "name": "DELETE payment/templates",
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"templateId\":22014\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/templates",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-52b0f05f-3dc5-478a-31c9-37941307b549",
-          "name": "fromTemplateDPO/create",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\"templateId\":22033,\r\n\"amount\":100,\r\n\"accountFrom\":\"40817810311118101001\",\r\n\"description\":\"123\",\r\n\"taxAmount\":200\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/payment/fromTemplateDPO/create",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-59066722-0f30-84fa-6081-f970d5d279ba",
-          "name": "paymentHistory copy",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{incorrect_token}}",
-                "disabled": true
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "localhost:4020/rest/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
-              "host": [
-                "localhost"
-              ],
-              "port": "4020",
-              "path": [
-                "rest",
-                "payment",
-                "paymentHistory"
-              ],
-              "query": [
-                {
-                  "key": "startPosition",
-                  "value": "0"
-                },
-                {
-                  "key": "count",
-                  "value": "10"
-                },
-                {
-                  "key": "businessObjectType",
-                  "value": "4.31.01.06"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-0cf78403-b790-17d5-7a28-fd935cc63e01",
-      "name": "ProductService",
-      "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)",
-      "item": [
-        {
-          "_postman_id": "1122592-6a787f8c-a220-a9fc-5ee0-587e2e93c1d1",
-          "name": "creditCardsTransactions",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \r\n    \"contractNumber\": \"22229783006\", \r\n    \"toDate\": \"2017-02-02\", \r\n    \"sort\": true, \r\n    \"fromDate\": \"2016-02-01\", \r\n    \"startPosition\": 1, \r\n    \"cardNumber\": \"7978222229783006\", \r\n    \"count\": 5, \r\n    \"accountNumber\": \"40817978222229783006\"\r\n}"
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "creditCards",
-                "transactions"
-              ],
-              "query": [
-                {
-                  "key": "contractNumber",
-                  "value": "22228103001"
-                },
-                {
-                  "key": "fromDate",
-                  "value": "2017-02-02"
-                },
-                {
-                  "key": "toDate",
-                  "value": "2017-02-02"
-                },
-                {
-                  "key": "isSort",
-                  "value": "true"
-                },
-                {
-                  "key": "startPosition",
-                  "value": "1"
-                },
-                {
-                  "key": "cardNumber",
-                  "value": "7810322228103001"
-                },
-                {
-                  "key": "count",
-                  "value": "5"
-                },
-                {
-                  "key": "accountNumber",
-                  "value": "40817810311118101001"
-                }
-              ]
-            },
-            "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-23a44d9b-c40c-6d9b-3ca9-80bfc25edf69",
-          "name": "debitCardDetails",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "debitCards",
-                "detail"
-              ],
-              "query": [
-                {
-                  "key": "cardNumber",
-                  "value": "\"5549604369478934\""
-                },
-                {
-                  "key": "contractNumber",
-                  "value": "\"11118101016\""
-                }
-              ]
-            },
-            "description": ">;CG5=85 45B0;59 4515B>2>9 :0@BK"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-640f7526-5941-9292-c14d-9954ee46711f",
-          "name": "deposits/detail",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "deposits",
-                "detail"
-              ],
-              "query": [
-                {
-                  "key": "contractNumber",
-                  "value": "\"810754448104001\""
-                },
-                {
-                  "key": "systemCode",
-                  "value": "TW"
-                },
-                {
-                  "key": "branchCode",
-                  "value": "\"1\""
-                }
-              ]
-            },
-            "description": " >;CG5=85 45B0;59 45?>78B0"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-e2adfd4b-a9c6-de92-8f9d-f203d5fc77ab",
-          "name": "addHashtag",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha1\"\r\n\t\t},\r\n\t\t\t\t{\r\n\t\t\t\"hashtag\":\"martha2\"\r\n\t\t}\r\n\t]\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/hashtag",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-3a9a5d3a-7bc8-9aa1-2215-5caba630258a",
-          "name": "getHashtag",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/hashtag?cuid=12345",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "hashtag"
-              ],
-              "query": [
-                {
-                  "key": "cuid",
-                  "value": "12345"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-648f2984-937e-41b2-4c7d-2d3c49d09999",
-          "name": "deleteHashtag",
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha\"\r\n\t\t}\r\n\t]\r\n}"
-            },
-            "url": "http://os-2023:7003/rest/hashtag",
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-76579972-172b-8a8d-6cd0-ef423373d0a8",
-          "name": "debitCards/transactions",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "debitCards",
-                "transactions"
-              ],
-              "query": [
-                {
-                  "key": "accountNumber",
-                  "value": "40817810911118101016"
-                },
-                {
-                  "key": "cardNumber",
-                  "value": "5549604369478934"
-                },
-                {
-                  "key": "fromDate",
-                  "value": "2017-02-02"
-                },
-                {
-                  "key": "toDate",
-                  "value": "2017-02-02"
-                },
-                {
-                  "key": "startPosition",
-                  "value": "0"
-                },
-                {
-                  "key": "count",
-                  "value": "100"
-                },
-                {
-                  "key": "isSort",
-                  "value": "true"
-                }
-              ]
-            },
-            "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> 4515B>2>9 :0@B5 (87 <>:0 AccountsWS-getDebitCardTransactions)"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1122592-fca9fc6f-150d-7122-a6d0-c99c103f2d3a",
-          "name": "deposits/transactions",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://os-2023:7003/rest/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
-              "host": [
-                "http://os-2023:7003"
-              ],
-              "path": [
-                "rest",
-                "deposits",
-                "transactions"
-              ],
-              "query": [
-                {
-                  "key": "accountNumber",
-                  "value": "42301810754448104001"
-                },
-                {
-                  "key": "cardNumber",
-                  "value": "1234567890017666"
-                },
-                {
-                  "key": "count",
-                  "value": "100"
-                },
-                {
-                  "key": "fromDate",
-                  "value": "2016-05-09"
-                },
-                {
-                  "key": "toDate",
-                  "value": "2016-05-09"
-                },
-                {
-                  "key": "isSort",
-                  "value": "true"
-                },
-                {
-                  "key": "startPosition",
-                  "value": "0"
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-2f015c12-8654-7a6c-e589-12fd20fa9864",
-      "name": "beneficiary",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "postman.setEnvironmentVariable(\"beneficiaryCode\", jsonData.code);",
-              "",
-              "/*[[start postmanerator]]*/",
-              "function populateNewAPIStructures() {",
-              "    APIStructures['beneficiary'] = {",
-              "        name: 'Beneficiary',",
-              "        description: '1L5:B >4=>3> 15=5D8F80@0',",
-              "        fields: [",
-              "            {name: 'code', description: '>4 15=5D8F80@0', type: 'UUID', mandatory: 'yes'},",
-              "            {name: 'name', description: '0720=85 15=5D8F80@0', type: 'string',  mandatory: 'yes'},",
-              "            {name: 'status', description: '!B0BCA 15=5D8F80@0', type: 'integer', mandatory: 'yes'},",
-              "            {name: 'categoryCode', description: '>4 :0B53>@88', type: 'string', mandatory: 'no'}",
-              "        ]",
-              "    };",
-              "}",
-              "/*[[end postmanerator]]*/"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-          },
-          {
-            "key": "Authorization",
-            "value": "{{invalid_token}}",
-            "disabled": true
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": ""
-        },
-        "url": {
-          "raw": "http://os-2023:7003/rest/gateway/beneficiary/:code",
-          "host": [
-            "http://os-2023:7003"
-          ],
-          "path": [
-            "rest",
-            "gateway",
-            "beneficiary",
-            ":code"
-          ],
-          "variable": [
-            {
-              "value": "6087",
-              "id": "code"
-            }
-          ]
-        },
-        "description": ""
-      },
-      "response": [
-        {
-          "id": "1122592-cacbd3e3-152f-4c73-0e8f-0065a5296d3e",
-          "name": "Category not fouund",
-          "originalRequest": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw",
-                "enabled": true,
-                "disabled": false
-              },
-              {
-                "key": "Authorization",
-                "value": "{{invalid_token}}",
-                "enabled": false,
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "http://os-2023:7003/rest/gateway/beneficiary/24543"
-          },
-          "status": "Bad Request",
-          "code": 400,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Cache-Control",
-              "value": "no-cache, no-store, max-age=0, must-revalidate",
-              "name": "Cache-Control",
-              "description": ""
-            },
-            {
-              "key": "Content-Length",
-              "value": "68",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Thu, 11 May 2017 14:53:21 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Expires",
-              "value": "Wed, 31 Dec 1969 23:59:59 GMT",
-              "name": "Expires",
-              "description": ""
-            },
-            {
-              "key": "Pragma",
-              "value": "no-cache",
-              "name": "Pragma",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "Servlet/2.5 JSP/2.1",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "68",
-          "body": "{\"errorMessage\":\"categoryCode not found\",\"fieldCode\":\"categoryCode\"}"
-        },
-        {
-          "id": "1122592-e9056d8c-5aac-271c-cf24-e4d0656162b8",
-          "name": "one beneficiary",
-          "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Cache-Control",
-              "value": "no-cache, no-store, max-age=0, must-revalidate",
-              "name": "Cache-Control",
-              "description": ""
-            },
-            {
-              "key": "Content-Length",
-              "value": "487",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Thu, 11 May 2017 14:51:30 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Expires",
-              "value": "Thu, 01 Jan 1970 00:00:00 GMT",
-              "name": "Expires",
-              "description": ""
-            },
-            {
-              "key": "Pragma",
-              "value": "no-cache",
-              "name": "Pragma",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "Servlet/2.5 JSP/2.1",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "1450",
-          "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":null,\"toDate\":null,\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.00,\"maxAmount\":15000.00,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-a508ad2d-eff0-099f-dae0-34634c4cafda",
-      "name": "createPayment",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "postman.setEnvironmentVariable(\"transactionID\", jsonData.transactionID);",
-              "",
-              "transactionID"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": "{{invalid_token}}",
-            "disabled": true
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":245,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
-        },
-        "url": "http://os-2023:7003/rest/gateway/createPayment",
-        "description": ""
-      },
-      "response": [
-        {
-          "id": "1122592-7a9099c5-e534-8764-3ace-ea1c6f98ec98",
-          "name": "400",
-          "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
-          },
-          "status": "Bad Request",
-          "code": 400,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "2",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Thu, 11 May 2017 14:12:00 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "Servlet/2.5 JSP/2.1",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "2600",
-          "body": "{}"
-        }
-      ]
-    },
-    {
-      "_postman_id": "1122592-edcb3ded-8238-ca0f-b4c9-9558a8c0574c",
-      "name": "confirmPayment",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": "{{invalid_token}}",
-            "disabled": true
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{  \"transactionId\" : 14219212,\n\"templateName\":\"8;09=\",\n\"otp\":\"11111111\"\n}"
-        },
-        "url": "http://os-2023:7003/rest/gateway/confirmPayment",
-        "description": ""
-      },
-      "response": []
+    "version": "1.0",
+    "title": "HomeCredit 2",
+    "description": "TODO: Add Description",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
     }
-  ]
+  },
+  "host": "https:",
+  "basePath": "//balancer-gateway-it-test2.omni.homecredit.ru:8112/oauth",
+  "securityDefinitions": {
+    "auth": {
+      "type": "basic",
+      "x-testValue": []
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/token": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "cuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/>;CG5=85">:5=0>O>ABC?0!5@28A0<response"
+            },
+            "examples": {
+              "application/json": {
+                "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
+                "token_type": "bearer",
+                "expires_in": 3599,
+                "scope": "/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1",
+                "cuid": "21807516",
+                "jti": "872a1fb7-b1a1-4e2d-aaac-0184896a7cf9"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/ClientRelatedWSProxy": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "tags": [
+          "1_>43>B>28B5;L=K5 H038"
+        ],
+        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/ClientRelatedWSProxy",
+              "headers": {
+                "Content-Type": "text/xml",
+                "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/catalogs/feetype": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "catalogs",
+        "tags": [
+          "CatalogService"
+        ],
+        "operationId": "catalogs",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/catalogs/feetype",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "catalogs",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/filteredAccounts": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "filteredAccounts",
+        "tags": [
+          "CoreAccountService"
+        ],
+        "operationId": "filteredAccounts",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/filteredAccounts",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "filteredAccounts",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/limit": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "limit",
+        "tags": [
+          "Limits"
+        ],
+        "operationId": "limit",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/limit",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "limit",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "{{server}}/rest/limit",
+        "tags": [
+          "Limits"
+        ],
+        "operationId": "{{server}}/rest/limit",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/{{server}}~1rest~1limitrequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/limit",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n \"limits\": [{\r\n \t\"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "{{server}}/rest/limit",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/ownAccounts/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "ownAccounts/create",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "ownAccounts/create",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Ownaccounts~1createrequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/ownAccounts/create",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{ \r\n\"accountFrom\":40817810911118101016, \r\n\"accountTo\":40817810311118101001, \r\n\"amount\":10000000000000, \r\n\"currency\":\"RUR\", \r\n\"templateName\":\"564 A2>8<8 4\" \r\n} "
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "ownAccounts/create",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/cardDpo/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "cardDpo/create",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "cardDpo/create",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Carddpo~1createrequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/cardDpo/create",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{ \r\n\"accountFrom\":\"40817810911118101016\", \r\n\"targetCardNumber\":\"4166229450914210\",\r\n\"amount\":22, \r\n\"currency\":\"RUR\"\r\n} "
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "cardDpo/create",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/fromTemplate/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "fromTemplate/create",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "fromTemplate/create",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Fromtemplate~1createrequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/fromTemplate/create",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\"templateId\":22061,\r\n\"accountFrom\":\"40817810911118101016\",\r\n\"amount\":100\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "fromTemplate/create",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/fromTemplateDPO/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "fromTemplateDPO/create1",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "fromTemplateDPO/create1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Fromtemplatedpo~1createrequest12"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/fromTemplateDPO/create",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\"templateId\":22033,\r\n\"amount\":100,\r\n\"accountFrom\":\"40817810311118101001\",\r\n\"description\":\"123\",\r\n\"taxAmount\":200\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "fromTemplateDPO/create",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/confirm": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "confirm",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "confirm",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ConfirmRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/confirm",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\t\"transactionId\":14221308,\r\n\t\"otp\":\"11111111\"\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "confirm",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/paymentTemplates": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentTemplates",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentTemplates",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/paymentTemplates",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentTemplates",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/paymentTemplateDetail": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentTemplateDetail",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentTemplateDetail",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/paymentTemplateDetail?templateId=9976",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentTemplateDetail",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/templates": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "templates",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "templates",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "bot",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/templates?bot=4.31.01.16",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "templates",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "DELETE payment/templates",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "DELETE payment/templates",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeletePayment~1templatesrequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "DELETE",
+              "uri": "/payment/templates",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\n    \"templateId\":22014\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "DELETE payment/templates",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/paymentFields": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentFields",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentFields",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "operationCode",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/paymentFields?operationCode=6058",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentFields",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/paymentHistory": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentHistory",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentHistory",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "businessObjectType",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentHistory",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/templateName": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "templateName",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "templateName",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TemplateNameRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/templateName",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "templateName",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/payment/sms": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "payment/sms",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "payment/sms",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Payment~1smsrequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/sms",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\"transactionId\":14221260}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "payment/sms",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/paymentHistory": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "paymentHistory copy",
+        "tags": [
+          "PaymentService"
+        ],
+        "operationId": "paymentHistory copy",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "businessObjectType",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "paymentHistory copy",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/creditCards/transactions": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "creditCardsTransactions",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "creditCardsTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "fromDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "isSort",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "description": ""
+          },
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "cardNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "accountNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "creditCardsTransactions",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/debitCards/detail": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "debitCardDetails",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "debitCardDetails",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cardNumber",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "debitCardDetails",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/deposits/detail": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "deposits/detail",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "deposits/detail",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "systemCode",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "branchCode",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "deposits/detail",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/hashtag": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "getHashtag",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "getHashtag",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/hashtag?cuid=12345",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getHashtag",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "addHashtag",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "addHashtag",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddHashtagRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/hashtag",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha1\"\r\n\t\t},\r\n\t\t\t\t{\r\n\t\t\t\"hashtag\":\"martha2\"\r\n\t\t}\r\n\t]\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "addHashtag",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "deleteHashtag",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "deleteHashtag",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteHashtagRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "DELETE",
+              "uri": "/hashtag",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha\"\r\n\t\t}\r\n\t]\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "deleteHashtag",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/debitCards/transactions": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "debitCards/transactions",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "debitCards/transactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "cardNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "fromDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "isSort",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "debitCards/transactions",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/deposits/transactions": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "deposits/transactions",
+        "tags": [
+          "ProductService"
+        ],
+        "operationId": "deposits/transactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "cardNumber",
+            "in": "query",
+            "required": true,
+            "type": "number",
+            "format": "double",
+            "description": ""
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "fromDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "date-time",
+            "description": ""
+          },
+          {
+            "name": "isSort",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "description": ""
+          },
+          {
+            "name": "startPosition",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "deposits/transactions",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/gateway/beneficiary/{code}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "beneficiary",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "beneficiary",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/BeneficiaryResponse"
+            },
+            "examples": {
+              "application/json": {
+                "code": "245",
+                "name": ";;> =:>3=8B>",
+                "status": 0,
+                "categoryCode": "1",
+                "fromDate": "null",
+                "toDate": "null",
+                "rapidaCode": "435",
+                "beneficiaryAccountId": "cyberplat_435",
+                "minAmount": 1.0,
+                "maxAmount": 15000.0,
+                "disclaimer": ">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.",
+                "fields": [
+                  {
+                    "name": "><5@ B5;5D>=0",
+                    "regexp": "",
+                    "tooltip": "><5@ B5;5D>=0 22>48BAO 157 \"8\".",
+                    "fieldType": 1,
+                    "mapping": "account",
+                    "enumValues": {}
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/gateway/beneficiary/6087",
+              "headers": {
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Content-Length": "487",
+                "Content-Type": "application/json",
+                "Date": "Thu, 11 May 2017 14:51:30 GMT",
+                "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+                "Pragma": "no-cache",
+                "X-Powered-By": "Servlet/2.5 JSP/2.1"
+              },
+              "body": "{\"code\":\"245\",\"name\":\";;> =:>3=8B>\",\"status\":0,\"categoryCode\":\"1\",\"fromDate\":\"null\",\"toDate\":\"null\",\"rapidaCode\":\"435\",\"beneficiaryAccountId\":\"cyberplat_435\",\"minAmount\":1.0,\"maxAmount\":15000.0,\"disclaimer\":\">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.\",\"fields\":[{\"name\":\"><5@ B5;5D>=0\",\"regexp\":\"\",\"tooltip\":\"><5@ B5;5D>=0 22>48BAO 157 \\\"8\\\".\",\"fieldType\":1,\"mapping\":\"account\",\"enumValues\":{}}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "beneficiary",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/gateway/createPayment": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "createPayment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "createPayment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatePaymentRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/gateway/createPayment",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{\r\n\"amount\":11.11,\r\n\"paymentDate\":\"1486328400000\",\r\n\"currencyCode\":\"RUR\",\r\n\"status\":0,\r\n\"account\":\"40817810911118101016\",\r\n\"beneficiaryCode\":245,\r\n\"fieldValues\":\r\n{\"cardNumber\":\"4704515446716803\"}\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "createPayment",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/gateway/confirmPayment": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "confirmPayment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "confirmPayment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ConfirmPaymentRequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/gateway/confirmPayment",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTA5MDk1OTAwLCJqdGkiOiI5MDVlNzkyMy02MWI5LTRmN2MtOWRiNi0xMTdmOTgwMjA2ZDgiLCJjbGllbnRfaWQiOiJpYnMifQ.SPrB5LSkf2aLsPQ_UfrGKKhOF5cld6JZAKaf9mtVZ4U_c-SQ-ZnCoFzjKWmjaJC77EOvCxmMPvwUeg6zLtNEmWeY2V4wgobxt1YbfKqkgHn9j1Gc_xAU4nLU2aGW89FxFTOHq_jUYjvjQGY6agVeUgjyA6prvQa6eeBKqDjpd3US_gECpSywe4IzAS-OvUscAXcR7BUvJFKvMVg5KBZ3tn0bkgkuhREW_O_fFABcWQRjN9fpww458LTGMg288U1Azfnl7_lDJ3IsipWJauMF-uDq6lBkec9ExJ-24dLo724UlbUZ85EiVDndvgQgJo8hqgq_jQLIf3Fc8990NerHjw"
+              },
+              "body": "{  \"transactionId\" : 14219212,\n\"templateName\":\"8;09=\",\n\"otp\":\"11111111\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "confirmPayment",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    ">;CG5=85">:5=0>O>ABC?0!5@28A0<response": {
+      "title": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<Response",
+      "example": {
+        "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
+        "token_type": "bearer",
+        "expires_in": 3599,
+        "scope": "/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1",
+        "cuid": "21807516",
+        "jti": "872a1fb7-b1a1-4e2d-aaac-0184896a7cf9"
+      },
+      "type": "object",
+      "properties": {
+        "access_token": {
+          "description": "",
+          "type": "string"
+        },
+        "token_type": {
+          "description": "",
+          "type": "string"
+        },
+        "expires_in": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "scope": {
+          "description": "",
+          "type": "string"
+        },
+        "cuid": {
+          "description": "",
+          "type": "string"
+        },
+        "jti": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "access_token",
+        "token_type",
+        "expires_in",
+        "scope",
+        "cuid",
+        "jti"
+      ]
+    },
+    "{{server}}/rest/limitrequest": {
+      "title": "{{server}}/rest/limitRequest",
+      "example": {
+        "limits": [
+          {
+            "bot": "4.31.01.16",
+            "value": 10000
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "limits": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Limit"
+          }
+        }
+      },
+      "required": [
+        "limits"
+      ]
+    },
+    "Limit": {
+      "title": "Limit",
+      "type": "object",
+      "properties": {
+        "bot": {
+          "description": "",
+          "type": "string"
+        },
+        "value": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "bot",
+        "value"
+      ]
+    },
+    "Ownaccounts/createrequest": {
+      "title": "ownAccounts/createRequest",
+      "example": {
+        "accountFrom": 40817810911118101016,
+        "accountTo": 40817810311118101001,
+        "amount": 10000000000000,
+        "currency": "RUR",
+        "templateName": "564 A2>8<8 4"
+      },
+      "type": "object",
+      "properties": {
+        "accountFrom": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountTo": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "amount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "currency": {
+          "description": "",
+          "type": "string"
+        },
+        "templateName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accountFrom",
+        "accountTo",
+        "amount",
+        "currency",
+        "templateName"
+      ]
+    },
+    "Carddpo/createrequest": {
+      "title": "cardDpo/createRequest",
+      "example": {
+        "accountFrom": "40817810911118101016",
+        "targetCardNumber": "4166229450914210",
+        "amount": 22,
+        "currency": "RUR"
+      },
+      "type": "object",
+      "properties": {
+        "accountFrom": {
+          "description": "",
+          "type": "string"
+        },
+        "targetCardNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "amount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "currency": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accountFrom",
+        "targetCardNumber",
+        "amount",
+        "currency"
+      ]
+    },
+    "Fromtemplate/createrequest": {
+      "title": "fromTemplate/createRequest",
+      "example": {
+        "templateId": 22061,
+        "accountFrom": "40817810911118101016",
+        "amount": 100
+      },
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountFrom": {
+          "description": "",
+          "type": "string"
+        },
+        "amount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "templateId",
+        "accountFrom",
+        "amount"
+      ]
+    },
+    "Fromtemplatedpo/create:Erequest": {
+      "title": "fromTemplateDPO/create %Request",
+      "example": {
+        "templateId": 22025,
+        "amount": 100,
+        "accountFrom": "40817810311118101001",
+        "description": "07=0G5=85",
+        "taxAmount": "null",
+        "params": {
+          "ZHKH_PROPS_KIND": "!",
+          "ZHKH_PROPS_VALUE": "1201123456",
+          "ZHKH_PAYMENT_MONTH": "05",
+          "ZHKH_PAYMENT_YEAR": "2015"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "amount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountFrom": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "taxAmount": {
+          "description": "",
+          "type": "string"
+        },
+        "params": {
+          "$ref": "#/definitions/Params"
+        }
+      },
+      "required": [
+        "templateId",
+        "amount",
+        "accountFrom",
+        "description",
+        "taxAmount",
+        "params"
+      ]
+    },
+    "Params": {
+      "title": "Params",
+      "type": "object",
+      "properties": {
+        "ZHKH_PROPS_KIND": {
+          "description": "",
+          "type": "string"
+        },
+        "ZHKH_PROPS_VALUE": {
+          "description": "",
+          "type": "string"
+        },
+        "ZHKH_PAYMENT_MONTH": {
+          "description": "",
+          "type": "string"
+        },
+        "ZHKH_PAYMENT_YEAR": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ZHKH_PROPS_KIND",
+        "ZHKH_PROPS_VALUE",
+        "ZHKH_PAYMENT_MONTH",
+        "ZHKH_PAYMENT_YEAR"
+      ]
+    },
+    "ConfirmRequest": {
+      "title": "confirmRequest",
+      "example": {
+        "transactionId": 14221308,
+        "otp": "11111111"
+      },
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "otp": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "transactionId",
+        "otp"
+      ]
+    },
+    "TemplateNameRequest": {
+      "title": "templateNameRequest",
+      "example": {
+        "templateId": 22092,
+        "templateName": "=CB@8 10=:0_=5 "
+      },
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "templateName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "templateId",
+        "templateName"
+      ]
+    },
+    "Payment/smsrequest": {
+      "title": "payment/smsRequest",
+      "example": {
+        "transactionId": 14221260
+      },
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "transactionId"
+      ]
+    },
+    "DeletePayment/templatesrequest": {
+      "title": "DELETE payment/templatesRequest",
+      "example": {
+        "templateId": 22014
+      },
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "templateId"
+      ]
+    },
+    "Fromtemplatedpo/createrequest12": {
+      "title": "fromTemplateDPO/createRequest12",
+      "example": {
+        "templateId": 22033,
+        "amount": 100,
+        "accountFrom": "40817810311118101001",
+        "description": "123",
+        "taxAmount": 200
+      },
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "amount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountFrom": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "taxAmount": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "templateId",
+        "amount",
+        "accountFrom",
+        "description",
+        "taxAmount"
+      ]
+    },
+    "AddHashtagRequest": {
+      "title": "addHashtagRequest",
+      "example": {
+        "movementNumber": "1000",
+        "valueDate": 1465479748000,
+        "cuid": 12345,
+        "accountNumber": "42301810754448104001",
+        "hashtagList": [
+          {
+            "hashtag": "tag1"
+          },
+          {
+            "hashtag": "martha1"
+          },
+          {
+            "hashtag": "martha2"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "movementNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "valueDate": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cuid": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "hashtagList": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HashtagList"
+          }
+        }
+      },
+      "required": [
+        "movementNumber",
+        "valueDate",
+        "cuid",
+        "accountNumber",
+        "hashtagList"
+      ]
+    },
+    "HashtagList": {
+      "title": "HashtagList",
+      "type": "object",
+      "properties": {
+        "hashtag": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hashtag"
+      ]
+    },
+    "DeleteHashtagRequest": {
+      "title": "deleteHashtagRequest",
+      "example": {
+        "movementNumber": "1000",
+        "valueDate": 1465479748000,
+        "cuid": 12345,
+        "accountNumber": "42301810754448104001",
+        "hashtagList": [
+          {
+            "hashtag": "tag1"
+          },
+          {
+            "hashtag": "martha"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "movementNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "valueDate": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cuid": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "hashtagList": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HashtagList"
+          }
+        }
+      },
+      "required": [
+        "movementNumber",
+        "valueDate",
+        "cuid",
+        "accountNumber",
+        "hashtagList"
+      ]
+    },
+    "BeneficiaryResponse": {
+      "title": "beneficiaryResponse",
+      "example": {
+        "code": "245",
+        "name": ";;> =:>3=8B>",
+        "status": 0,
+        "categoryCode": "1",
+        "fromDate": "null",
+        "toDate": "null",
+        "rapidaCode": "435",
+        "beneficiaryAccountId": "cyberplat_435",
+        "minAmount": 1.0,
+        "maxAmount": 15000.0,
+        "disclaimer": ">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.",
+        "fields": [
+          {
+            "name": "><5@ B5;5D>=0",
+            "regexp": "",
+            "tooltip": "><5@ B5;5D>=0 22>48BAO 157 \"8\".",
+            "fieldType": 1,
+            "mapping": "account",
+            "enumValues": {}
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryCode": {
+          "description": "",
+          "type": "string"
+        },
+        "fromDate": {
+          "description": "",
+          "type": "string"
+        },
+        "toDate": {
+          "description": "",
+          "type": "string"
+        },
+        "rapidaCode": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryAccountId": {
+          "description": "",
+          "type": "string"
+        },
+        "minAmount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "maxAmount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "disclaimer": {
+          "description": "",
+          "type": "string"
+        },
+        "fields": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Field"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "status",
+        "categoryCode",
+        "fromDate",
+        "toDate",
+        "rapidaCode",
+        "beneficiaryAccountId",
+        "minAmount",
+        "maxAmount",
+        "disclaimer",
+        "fields"
+      ]
+    },
+    "Field": {
+      "title": "Field",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "regexp": {
+          "description": "",
+          "type": "string"
+        },
+        "tooltip": {
+          "description": "",
+          "type": "string"
+        },
+        "fieldType": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "mapping": {
+          "description": "",
+          "type": "string"
+        },
+        "enumValues": {
+          "description": "",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "regexp",
+        "tooltip",
+        "fieldType",
+        "mapping",
+        "enumValues"
+      ]
+    },
+    "CreatePaymentRequest": {
+      "title": "createPaymentRequest",
+      "example": {
+        "amount": 11.11,
+        "paymentDate": "1486328400000",
+        "currencyCode": "RUR",
+        "status": 0,
+        "account": "40817810911118101016",
+        "beneficiaryCode": 245,
+        "fieldValues": {
+          "cardNumber": "4704515446716803"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "amount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "paymentDate": {
+          "description": "",
+          "type": "string"
+        },
+        "currencyCode": {
+          "description": "",
+          "type": "string"
+        },
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "account": {
+          "description": "",
+          "type": "string"
+        },
+        "beneficiaryCode": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "fieldValues": {
+          "$ref": "#/definitions/FieldValues"
+        }
+      },
+      "required": [
+        "amount",
+        "paymentDate",
+        "currencyCode",
+        "status",
+        "account",
+        "beneficiaryCode",
+        "fieldValues"
+      ]
+    },
+    "FieldValues": {
+      "title": "FieldValues",
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cardNumber"
+      ]
+    },
+    "ConfirmPaymentRequest": {
+      "title": "confirmPaymentRequest",
+      "example": {
+        "transactionId": 14219212,
+        "templateName": "8;09=",
+        "otp": "11111111"
+      },
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "templateName": {
+          "description": "",
+          "type": "string"
+        },
+        "otp": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "transactionId",
+        "templateName",
+        "otp"
+      ]
+    }
+  }
 }
