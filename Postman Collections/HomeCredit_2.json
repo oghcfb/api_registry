@@ -29,7 +29,7 @@
   "paths": {
     "/token": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "All API calls use OAuth2 Client Credentials Flow, see http://tools.ietf.org/html/rfc6749#section-4.4\n\nAny request must contain valid OAuth2 token, that must be obtained via Access Token Request http://tools.ietf.org/html/rfc6749#section-4.4.2 This should be implemented in Oauth2 libraries for any language/framework.\n\nBasic auth is used as credentials to obtain token. Each partner has its own login/password for that. Sample partner account was created for testing purposes. Login: test_partner, password: test_partner_secret.",
         "summary": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
@@ -96,7 +96,7 @@
     },
     "/ClientRelatedWSProxy": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": ">ABC? : REST A5@28A0< IBS ?>72>;5= A =0@C68 B>;L:> B5< :;85=B0<, :>B>@K5 8<5NB 0:B828@>= :0=0; REST.\n0==K9 A5@28A 8A?>;L7C5BAO 4;O 0:B820F88 / 450:B820F88 :0=0;0 REST :>=:@5B=>3> :;85=B0.",
         "summary": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
@@ -152,7 +152,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">ABC? : REST A5@28A0< IBS ?>72>;5= A =0@C68 B>;L:> B5< :;85=B0<, :>B>@K5 8<5NB 0:B828@>= :0=0; REST.\n0==K9 A5@28A 8A?>;L7C5BAO 4;O 0:B820F88 / 450:B820F88 :0=0;0 REST :>=:@5B=>3> :;85=B0."
           }
         ],
         "x-operation-settings": {
@@ -165,7 +165,7 @@
     },
     "/catalogs/feetype": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C\nPRODUCTTYPE - :>4 :0B0;>30 87 GFO_CATALOGTYPE, <>65B 1KBL ;N1K<\n\n@>25@:0 7=0G5=89 ?> >B25BC <>6=> ?@>25@8BL 2 04<8=:5 (4<8=8AB@8@>20=85/!?@02>G=8:8/0B0;>3 (K1@0BL 87 2K?040NI53> A?8A:0))",
         "summary": "catalogs",
         "tags": [
           "CatalogService"
@@ -209,7 +209,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "catalogs",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C\nPRODUCTTYPE - :>4 :0B0;>30 87 GFO_CATALOGTYPE, <>65B 1KBL ;N1K<\n\n@>25@:0 7=0G5=89 ?> >B25BC <>6=> ?@>25@8BL 2 04<8=:5 (4<8=8AB@8@>20=85/!?@02>G=8:8/0B0;>3 (K1@0BL 87 2K?040NI53> A?8A:0))"
           }
         ],
         "x-operation-settings": {
@@ -222,7 +222,7 @@
     },
     "/filteredAccounts": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : ",
         "summary": "filteredAccounts",
         "tags": [
           "CoreAccountService"
@@ -266,7 +266,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "filteredAccounts",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : "
           }
         ],
         "x-operation-settings": {
@@ -279,7 +279,7 @@
     },
     "/limit": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "limit",
         "tags": [
           "Limits"
@@ -323,7 +323,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "limit",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -334,7 +334,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "{{server}}/rest/limit",
         "tags": [
           "Limits"
@@ -396,7 +396,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "{{server}}/rest/limit",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -409,7 +409,7 @@
     },
     "/payment/ownAccounts/create": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "!>740=85 ?5@52>40 <564C A2>8<8 AG5B0<8 (2>7<>6=> A A>E@0=5=85< H01;>=0)",
         "summary": "ownAccounts/create",
         "tags": [
           "PaymentService"
@@ -471,7 +471,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "ownAccounts/create",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "!>740=85 ?5@52>40 <564C A2>8<8 AG5B0<8 (2>7<>6=> A A>E@0=5=85< H01;>=0)"
           }
         ],
         "x-operation-settings": {
@@ -484,7 +484,7 @@
     },
     "/payment/cardDpo/create": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "!>740=85 ?5@52>40 ?> =><5@C :0@BK G5@57 !-",
         "summary": "cardDpo/create",
         "tags": [
           "PaymentService"
@@ -546,7 +546,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "cardDpo/create",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": "!>740=85 ?5@52>40 ?> =><5@C :0@BK G5@57 !-"
           }
         ],
         "x-operation-settings": {
@@ -559,7 +559,7 @@
     },
     "/payment/fromTemplate/create": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "fromTemplate/create",
         "tags": [
           "PaymentService"
@@ -621,7 +621,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "fromTemplate/create",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -634,7 +634,7 @@
     },
     "/payment/fromTemplateDPO/create": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "fromTemplateDPO/create1",
         "tags": [
           "PaymentService"
@@ -696,7 +696,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "fromTemplateDPO/create",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -709,7 +709,7 @@
     },
     "/payment/confirm": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "confirm",
         "tags": [
           "PaymentService"
@@ -771,7 +771,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "confirm",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -784,7 +784,7 @@
     },
     "/payment/paymentTemplates": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "paymentTemplates",
         "tags": [
           "PaymentService"
@@ -828,7 +828,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "paymentTemplates",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -841,7 +841,7 @@
     },
     "/payment/paymentTemplateDetail": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "paymentTemplateDetail",
         "tags": [
           "PaymentService"
@@ -893,7 +893,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "paymentTemplateDetail",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -906,7 +906,7 @@
     },
     "/payment/templates": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "templates",
         "tags": [
           "PaymentService"
@@ -965,7 +965,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "templates",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -976,7 +976,7 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "DELETE payment/templates",
         "tags": [
           "PaymentService"
@@ -1038,7 +1038,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "DELETE payment/templates",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1051,7 +1051,7 @@
     },
     "/payment/paymentFields": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "paymentFields",
         "tags": [
           "PaymentService"
@@ -1103,7 +1103,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "paymentFields",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1116,7 +1116,7 @@
     },
     "/payment/paymentHistory": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "paymentHistory",
         "tags": [
           "PaymentService"
@@ -1183,7 +1183,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "paymentHistory",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1196,7 +1196,7 @@
     },
     "/payment/templateName": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "templateName",
         "tags": [
           "PaymentService"
@@ -1258,7 +1258,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "templateName",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1271,7 +1271,7 @@
     },
     "/payment/sms": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "payment/sms",
         "tags": [
           "PaymentService"
@@ -1333,7 +1333,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "payment/sms",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1346,7 +1346,7 @@
     },
     "/paymentHistory": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "paymentHistory copy",
         "tags": [
           "PaymentService"
@@ -1421,7 +1421,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "paymentHistory copy",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1434,7 +1434,7 @@
     },
     "/creditCards/transactions": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)",
         "summary": "creditCardsTransactions",
         "tags": [
           "ProductService"
@@ -1549,7 +1549,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "creditCardsTransactions",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)"
           }
         ],
         "x-operation-settings": {
@@ -1562,7 +1562,7 @@
     },
     "/debitCards/detail": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": ">;CG5=85 45B0;59 4515B>2>9 :0@BK",
         "summary": "debitCardDetails",
         "tags": [
           "ProductService"
@@ -1620,7 +1620,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "debitCardDetails",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">;CG5=85 45B0;59 4515B>2>9 :0@BK"
           }
         ],
         "x-operation-settings": {
@@ -1633,7 +1633,7 @@
     },
     "/deposits/detail": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": " >;CG5=85 45B0;59 45?>78B0",
         "summary": "deposits/detail",
         "tags": [
           "ProductService"
@@ -1698,7 +1698,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "deposits/detail",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": " >;CG5=85 45B0;59 45?>78B0"
           }
         ],
         "x-operation-settings": {
@@ -1711,7 +1711,7 @@
     },
     "/hashtag": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "getHashtag",
         "tags": [
           "ProductService"
@@ -1763,7 +1763,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "getHashtag",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1774,7 +1774,7 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "addHashtag",
         "tags": [
           "ProductService"
@@ -1836,7 +1836,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "addHashtag",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1847,7 +1847,7 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "deleteHashtag",
         "tags": [
           "ProductService"
@@ -1909,7 +1909,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "deleteHashtag",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -1922,7 +1922,7 @@
     },
     "/debitCards/transactions": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> 4515B>2>9 :0@B5 (87 <>:0 AccountsWS-getDebitCardTransactions)",
         "summary": "debitCards/transactions",
         "tags": [
           "ProductService"
@@ -2021,7 +2021,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "debitCards/transactions",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> 4515B>2>9 :0@B5 (87 <>:0 AccountsWS-getDebitCardTransactions)"
           }
         ],
         "x-operation-settings": {
@@ -2034,7 +2034,7 @@
     },
     "/deposits/transactions": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "deposits/transactions",
         "tags": [
           "ProductService"
@@ -2133,7 +2133,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "deposits/transactions",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -2146,7 +2146,7 @@
     },
     "/gateway/beneficiary/{code}": {
       "get": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "beneficiary",
         "tags": [
           "Misc"
@@ -2238,7 +2238,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "beneficiary",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -2251,7 +2251,7 @@
     },
     "/gateway/createPayment": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "createPayment",
         "tags": [
           "Misc"
@@ -2317,7 +2317,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "createPayment",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
@@ -2330,7 +2330,7 @@
     },
     "/gateway/confirmPayment": {
       "post": {
-        "description": "TODO: Add Description",
+        "description": "",
         "summary": "confirmPayment",
         "tags": [
           "Misc"
@@ -2392,7 +2392,7 @@
             "x-testShouldPass": true,
             "x-testEnabled": true,
             "x-testName": "confirmPayment",
-            "x-testDescription": "TODO: Add Description"
+            "x-testDescription": ""
           }
         ],
         "x-operation-settings": {
