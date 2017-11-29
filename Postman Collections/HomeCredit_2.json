@@ -383,7 +383,7 @@
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTEwNjYzMjczLCJqdGkiOiIzYzQyOGIzMS0zMzJkLTQ1NTEtYmE1Yy01MWQ5Nzc2NmZkOGYiLCJjbGllbnRfaWQiOiJpYnMifQ.ZaaZgT6V8hoUrI-LiXXV2SzTaGSUcU2QRzHousAKvZXjprkdGc6XZgTDmO0N4ygaonI-diSXEa5GsKlDaC9mbJuhl6bGVGO78Ta4ZorodMcpVINHrj9Iap3KGbpIKdNCDfZGLTChMrL3VANKkBAniaZxGUoTzhsARrIARsGraj7bDO1XlRNOvtXxxOXxpwTdhNwASBM9E4bdOdHgmxIKjBnrVaXXRoyGqSagImJCmm1nEIqO-tLL9KFPNXAyV4AjQMfIEoXGo_Xva6PDb2GprJogRp3pzacMH0eoewCJbot3s0WF7vy1fLUibMO7FyDEWJx2AJFcG4la6ucQax8NoQ"
               },
-              "body": "{\r\n \"limits\": [{\r\n \t\"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
+              "body": "{\r\n \"limits\": [{\r\n   \"bot\": \"4.31.01.16\",\r\n    \"value\": 10000\r\n }]\r\n}\r\n\r\n"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -758,7 +758,7 @@
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTEwNjYzMjczLCJqdGkiOiIzYzQyOGIzMS0zMzJkLTQ1NTEtYmE1Yy01MWQ5Nzc2NmZkOGYiLCJjbGllbnRfaWQiOiJpYnMifQ.ZaaZgT6V8hoUrI-LiXXV2SzTaGSUcU2QRzHousAKvZXjprkdGc6XZgTDmO0N4ygaonI-diSXEa5GsKlDaC9mbJuhl6bGVGO78Ta4ZorodMcpVINHrj9Iap3KGbpIKdNCDfZGLTChMrL3VANKkBAniaZxGUoTzhsARrIARsGraj7bDO1XlRNOvtXxxOXxpwTdhNwASBM9E4bdOdHgmxIKjBnrVaXXRoyGqSagImJCmm1nEIqO-tLL9KFPNXAyV4AjQMfIEoXGo_Xva6PDb2GprJogRp3pzacMH0eoewCJbot3s0WF7vy1fLUibMO7FyDEWJx2AJFcG4la6ucQax8NoQ"
               },
-              "body": "{\r\n\t\"transactionId\":14221308,\r\n\t\"otp\":\"11111111\"\r\n}"
+              "body": "{\r\n  \"transactionId\":14221308,\r\n  \"otp\":\"11111111\"\r\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1245,7 +1245,7 @@
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTEwNjYzMjczLCJqdGkiOiIzYzQyOGIzMS0zMzJkLTQ1NTEtYmE1Yy01MWQ5Nzc2NmZkOGYiLCJjbGllbnRfaWQiOiJpYnMifQ.ZaaZgT6V8hoUrI-LiXXV2SzTaGSUcU2QRzHousAKvZXjprkdGc6XZgTDmO0N4ygaonI-diSXEa5GsKlDaC9mbJuhl6bGVGO78Ta4ZorodMcpVINHrj9Iap3KGbpIKdNCDfZGLTChMrL3VANKkBAniaZxGUoTzhsARrIARsGraj7bDO1XlRNOvtXxxOXxpwTdhNwASBM9E4bdOdHgmxIKjBnrVaXXRoyGqSagImJCmm1nEIqO-tLL9KFPNXAyV4AjQMfIEoXGo_Xva6PDb2GprJogRp3pzacMH0eoewCJbot3s0WF7vy1fLUibMO7FyDEWJx2AJFcG4la6ucQax8NoQ"
               },
-              "body": "{\n\t\"templateId\" : 22092,\n\t\"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
+              "body": "{\n  \"templateId\" : 22092,\n  \"templateName\":\"=CB@8 10=:0_=5 \"\n\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1823,7 +1823,7 @@
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTEwNjYzMjczLCJqdGkiOiIzYzQyOGIzMS0zMzJkLTQ1NTEtYmE1Yy01MWQ5Nzc2NmZkOGYiLCJjbGllbnRfaWQiOiJpYnMifQ.ZaaZgT6V8hoUrI-LiXXV2SzTaGSUcU2QRzHousAKvZXjprkdGc6XZgTDmO0N4ygaonI-diSXEa5GsKlDaC9mbJuhl6bGVGO78Ta4ZorodMcpVINHrj9Iap3KGbpIKdNCDfZGLTChMrL3VANKkBAniaZxGUoTzhsARrIARsGraj7bDO1XlRNOvtXxxOXxpwTdhNwASBM9E4bdOdHgmxIKjBnrVaXXRoyGqSagImJCmm1nEIqO-tLL9KFPNXAyV4AjQMfIEoXGo_Xva6PDb2GprJogRp3pzacMH0eoewCJbot3s0WF7vy1fLUibMO7FyDEWJx2AJFcG4la6ucQax8NoQ"
               },
-              "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha1\"\r\n\t\t},\r\n\t\t\t\t{\r\n\t\t\t\"hashtag\":\"martha2\"\r\n\t\t}\r\n\t]\r\n}"
+              "body": "{\r\n  \"movementNumber\": \"1000\",\r\n  \"valueDate\": 1465479748000,\r\n  \"cuid\" : 12345,\r\n  \"accountNumber\": \"42301810754448104001\",\r\n  \"hashtagList\":[\r\n    {\r\n      \"hashtag\":\"tag1\"\r\n    },\r\n    {\r\n      \"hashtag\":\"martha1\"\r\n    },\r\n        {\r\n      \"hashtag\":\"martha2\"\r\n    }\r\n  ]\r\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1896,7 +1896,7 @@
                 "Content-Type": "application/json",
                 "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTEwNjYzMjczLCJqdGkiOiIzYzQyOGIzMS0zMzJkLTQ1NTEtYmE1Yy01MWQ5Nzc2NmZkOGYiLCJjbGllbnRfaWQiOiJpYnMifQ.ZaaZgT6V8hoUrI-LiXXV2SzTaGSUcU2QRzHousAKvZXjprkdGc6XZgTDmO0N4ygaonI-diSXEa5GsKlDaC9mbJuhl6bGVGO78Ta4ZorodMcpVINHrj9Iap3KGbpIKdNCDfZGLTChMrL3VANKkBAniaZxGUoTzhsARrIARsGraj7bDO1XlRNOvtXxxOXxpwTdhNwASBM9E4bdOdHgmxIKjBnrVaXXRoyGqSagImJCmm1nEIqO-tLL9KFPNXAyV4AjQMfIEoXGo_Xva6PDb2GprJogRp3pzacMH0eoewCJbot3s0WF7vy1fLUibMO7FyDEWJx2AJFcG4la6ucQax8NoQ"
               },
-              "body": "{\r\n\t\"movementNumber\": \"1000\",\r\n\t\"valueDate\": 1465479748000,\r\n\t\"cuid\" : 12345,\r\n\t\"accountNumber\": \"42301810754448104001\",\r\n\t\"hashtagList\":[\r\n\t\t{\r\n\t\t\t\"hashtag\":\"tag1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"hashtag\":\"martha\"\r\n\t\t}\r\n\t]\r\n}"
+              "body": "{\r\n  \"movementNumber\": \"1000\",\r\n  \"valueDate\": 1465479748000,\r\n  \"cuid\" : 12345,\r\n  \"accountNumber\": \"42301810754448104001\",\r\n  \"hashtagList\":[\r\n    {\r\n      \"hashtag\":\"tag1\"\r\n    },\r\n    {\r\n      \"hashtag\":\"martha\"\r\n    }\r\n  ]\r\n}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
