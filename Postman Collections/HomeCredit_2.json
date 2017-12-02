@@ -14,7 +14,8 @@
   "securityDefinitions": {
     "auth": {
       "type": "basic",
-      "x-testValue": []
+      "x-testValue": [],
+      "x-skip-client-authentication": false
     }
   },
   "schemes": [
