@@ -35,7 +35,7 @@
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
         ],
-        "operationId": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
+        "operationId": "TokenPost",
         "produces": [
           "application/json"
         ],
@@ -102,7 +102,7 @@
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
         ],
-        "operationId": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
+        "operationId": "ClientRelatedWSProxyPost",
         "produces": [
           "application/json"
         ],
@@ -171,7 +171,7 @@
         "tags": [
           "CatalogService"
         ],
-        "operationId": "catalogs",
+        "operationId": "CatalogsFeetypeGet",
         "produces": [
           "application/json"
         ],
@@ -228,7 +228,7 @@
         "tags": [
           "CoreAccountService"
         ],
-        "operationId": "filteredAccounts",
+        "operationId": "FilteredAccountsGet",
         "produces": [
           "application/json"
         ],
@@ -285,7 +285,7 @@
         "tags": [
           "Limits"
         ],
-        "operationId": "limit",
+        "operationId": "LimitGet",
         "produces": [
           "application/json"
         ],
@@ -340,7 +340,7 @@
         "tags": [
           "Limits"
         ],
-        "operationId": "{{server}}/rest/limit",
+        "operationId": "LimitPut",
         "produces": [
           "application/json"
         ],
@@ -415,7 +415,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "ownAccounts/create",
+        "operationId": "PaymentOwnAccountsCreatePost",
         "produces": [
           "application/json"
         ],
@@ -490,7 +490,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "cardDpo/create",
+        "operationId": "PaymentCardDpoCreatePost",
         "produces": [
           "application/json"
         ],
@@ -565,7 +565,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "fromTemplate/create",
+        "operationId": "PaymentFromTemplateCreatePost",
         "produces": [
           "application/json"
         ],
@@ -640,7 +640,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "fromTemplateDPO/create1",
+        "operationId": "PaymentFromTemplateDPOCreatePost2",
         "produces": [
           "application/json"
         ],
@@ -715,7 +715,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "confirm",
+        "operationId": "PaymentConfirmPost",
         "produces": [
           "application/json"
         ],
@@ -790,7 +790,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "paymentTemplates",
+        "operationId": "PaymentPaymentTemplatesGet",
         "produces": [
           "application/json"
         ],
@@ -847,7 +847,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "paymentTemplateDetail",
+        "operationId": "PaymentPaymentTemplateDetailGet",
         "produces": [
           "application/json"
         ],
@@ -912,7 +912,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "templates",
+        "operationId": "PaymentTemplatesGet",
         "produces": [
           "application/json"
         ],
@@ -982,7 +982,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "DELETE payment/templates",
+        "operationId": "PaymentTemplatesDelete",
         "produces": [
           "application/json"
         ],
@@ -1057,7 +1057,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "paymentFields",
+        "operationId": "PaymentPaymentFieldsGet",
         "produces": [
           "application/json"
         ],
@@ -1122,7 +1122,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "paymentHistory",
+        "operationId": "PaymentPaymentHistoryGet",
         "produces": [
           "application/json"
         ],
@@ -1202,7 +1202,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "templateName",
+        "operationId": "PaymentTemplateNamePost",
         "produces": [
           "application/json"
         ],
@@ -1277,7 +1277,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "payment/sms",
+        "operationId": "PaymentSmsPost",
         "produces": [
           "application/json"
         ],
@@ -1352,7 +1352,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "paymentHistory copy",
+        "operationId": "PaymentHistoryGet",
         "produces": [
           "application/json"
         ],
@@ -1440,7 +1440,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "creditCardsTransactions",
+        "operationId": "CreditCardsTransactionsGet",
         "produces": [
           "application/json"
         ],
@@ -1568,7 +1568,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "debitCardDetails",
+        "operationId": "DebitCardsDetailGet",
         "produces": [
           "application/json"
         ],
@@ -1639,7 +1639,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "deposits/detail",
+        "operationId": "DepositsDetailGet",
         "produces": [
           "application/json"
         ],
@@ -1717,7 +1717,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "getHashtag",
+        "operationId": "HashtagGet",
         "produces": [
           "application/json"
         ],
@@ -1780,7 +1780,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "addHashtag",
+        "operationId": "HashtagPut",
         "produces": [
           "application/json"
         ],
@@ -1853,7 +1853,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "deleteHashtag",
+        "operationId": "HashtagDelete",
         "produces": [
           "application/json"
         ],
@@ -1928,7 +1928,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "debitCards/transactions",
+        "operationId": "DebitCardsTransactionsGet",
         "produces": [
           "application/json"
         ],
@@ -2040,7 +2040,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "deposits/transactions",
+        "operationId": "DepositsTransactionsGet",
         "produces": [
           "application/json"
         ],
@@ -2152,7 +2152,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "beneficiary",
+        "operationId": "GatewayBeneficiaryByCodeGet",
         "produces": [
           "application/json"
         ],
@@ -2257,7 +2257,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "createPayment",
+        "operationId": "GatewayCreatePaymentPost",
         "produces": [
           "application/json"
         ],
@@ -2336,7 +2336,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "confirmPayment",
+        "operationId": "GatewayConfirmPaymentPost",
         "produces": [
           "application/json"
         ],
