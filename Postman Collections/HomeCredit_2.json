@@ -450,31 +450,7 @@
           }
         },
         "security": [],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/payment/ownAccounts/create",
-              "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer undefined"
-              },
-              "body": "{ \r\n\"accountFrom\":40817810911118101016, \r\n\"accountTo\":40817810311118101001, \r\n\"amount\":10000000000000, \r\n\"currency\":\"RUR\", \r\n\"templateName\":\"564 A2>8<8 4\" \r\n} "
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "ownAccounts/create",
-            "x-testDescription": "!>740=85 ?5@52>40 <564C A2>8<8 AG5B0<8 (2>7<>6=> A A>E@0=5=85< H01;>=0)"
-          }
-        ],
+        "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2420,27 +2396,33 @@
       "properties": {
         "access_token": {
           "description": "",
+          "example": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
           "type": "string"
         },
         "token_type": {
           "description": "",
+          "example": "bearer",
           "type": "string"
         },
         "expires_in": {
           "description": "",
+          "example": 3599,
           "type": "integer",
           "format": "int32"
         },
         "scope": {
           "description": "",
+          "example": "/application/v1 /cardregistry/v1 /biker/v1 /kladr/v1 /esia/v1",
           "type": "string"
         },
         "cuid": {
           "description": "",
+          "example": "21807516",
           "type": "string"
         },
         "jti": {
           "description": "",
+          "example": "872a1fb7-b1a1-4e2d-aaac-0184896a7cf9",
           "type": "string"
         }
       },
@@ -2467,6 +2449,12 @@
       "properties": {
         "limits": {
           "description": "",
+          "example": [
+            {
+              "bot": "4.31.01.16",
+              "value": 10000
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Limit"
@@ -2479,14 +2467,20 @@
     },
     "Limit": {
       "title": "Limit",
+      "example": {
+        "bot": "4.31.01.16",
+        "value": 10000
+      },
       "type": "object",
       "properties": {
         "bot": {
           "description": "",
+          "example": "4.31.01.16",
           "type": "string"
         },
         "value": {
           "description": "",
+          "example": 10000,
           "type": "integer",
           "format": "int32"
         }
@@ -2519,15 +2513,18 @@
         },
         "amount": {
           "description": "",
+          "example": 10000000000000,
           "type": "integer",
-          "format": "int32"
+          "format": "int64"
         },
         "currency": {
           "description": "",
+          "example": "RUR",
           "type": "string"
         },
         "templateName": {
           "description": "",
+          "example": "564 A2>8<8 4",
           "type": "string"
         }
       },
@@ -2551,19 +2548,23 @@
       "properties": {
         "accountFrom": {
           "description": "",
+          "example": "40817810911118101016",
           "type": "string"
         },
         "targetCardNumber": {
           "description": "",
+          "example": "4166229450914210",
           "type": "string"
         },
         "amount": {
           "description": "",
+          "example": 22,
           "type": "integer",
           "format": "int32"
         },
         "currency": {
           "description": "",
+          "example": "RUR",
           "type": "string"
         }
       },
@@ -2585,15 +2586,18 @@
       "properties": {
         "templateId": {
           "description": "",
+          "example": 22061,
           "type": "integer",
           "format": "int32"
         },
         "accountFrom": {
           "description": "",
+          "example": "40817810911118101016",
           "type": "string"
         },
         "amount": {
           "description": "",
+          "example": 100,
           "type": "integer",
           "format": "int32"
         }
@@ -2623,20 +2627,24 @@
       "properties": {
         "templateId": {
           "description": "",
+          "example": 22025,
           "type": "integer",
           "format": "int32"
         },
         "amount": {
           "description": "",
+          "example": 100,
           "type": "integer",
           "format": "int32"
         },
         "accountFrom": {
           "description": "",
+          "example": "40817810311118101001",
           "type": "string"
         },
         "description": {
           "description": "",
+          "example": "07=0G5=85",
           "type": "string"
         },
         "taxAmount": {
@@ -2644,7 +2652,13 @@
           "type": "string"
         },
         "params": {
-          "$ref": "#/definitions/Params"
+          "$ref": "#/definitions/Params",
+          "example": {
+            "ZHKH_PROPS_KIND": "!",
+            "ZHKH_PROPS_VALUE": "1201123456",
+            "ZHKH_PAYMENT_MONTH": "05",
+            "ZHKH_PAYMENT_YEAR": "2015"
+          }
         }
       },
       "required": [
@@ -2658,22 +2672,32 @@
     },
     "Params": {
       "title": "Params",
+      "example": {
+        "ZHKH_PROPS_KIND": "!",
+        "ZHKH_PROPS_VALUE": "1201123456",
+        "ZHKH_PAYMENT_MONTH": "05",
+        "ZHKH_PAYMENT_YEAR": "2015"
+      },
       "type": "object",
       "properties": {
         "ZHKH_PROPS_KIND": {
           "description": "",
+          "example": "!",
           "type": "string"
         },
         "ZHKH_PROPS_VALUE": {
           "description": "",
+          "example": "1201123456",
           "type": "string"
         },
         "ZHKH_PAYMENT_MONTH": {
           "description": "",
+          "example": "05",
           "type": "string"
         },
         "ZHKH_PAYMENT_YEAR": {
           "description": "",
+          "example": "2015",
           "type": "string"
         }
       },
@@ -2694,11 +2718,13 @@
       "properties": {
         "transactionId": {
           "description": "",
+          "example": 14221308,
           "type": "integer",
           "format": "int32"
         },
         "otp": {
           "description": "",
+          "example": "11111111",
           "type": "string"
         }
       },
@@ -2717,11 +2743,13 @@
       "properties": {
         "templateId": {
           "description": "",
+          "example": 22092,
           "type": "integer",
           "format": "int32"
         },
         "templateName": {
           "description": "",
+          "example": "=CB@8 10=:0_=5 ",
           "type": "string"
         }
       },
@@ -2739,6 +2767,7 @@
       "properties": {
         "transactionId": {
           "description": "",
+          "example": 14221260,
           "type": "integer",
           "format": "int32"
         }
@@ -2756,6 +2785,7 @@
       "properties": {
         "templateId": {
           "description": "",
+          "example": 22014,
           "type": "integer",
           "format": "int32"
         }
@@ -2777,24 +2807,29 @@
       "properties": {
         "templateId": {
           "description": "",
+          "example": 22033,
           "type": "integer",
           "format": "int32"
         },
         "amount": {
           "description": "",
+          "example": 100,
           "type": "integer",
           "format": "int32"
         },
         "accountFrom": {
           "description": "",
+          "example": "40817810311118101001",
           "type": "string"
         },
         "description": {
           "description": "",
+          "example": "123",
           "type": "string"
         },
         "taxAmount": {
           "description": "",
+          "example": 200,
           "type": "integer",
           "format": "int32"
         }
@@ -2830,24 +2865,39 @@
       "properties": {
         "movementNumber": {
           "description": "",
+          "example": "1000",
           "type": "string"
         },
         "valueDate": {
           "description": "",
+          "example": 1465479748000,
           "type": "integer",
-          "format": "int32"
+          "format": "int64"
         },
         "cuid": {
           "description": "",
+          "example": 12345,
           "type": "integer",
           "format": "int32"
         },
         "accountNumber": {
           "description": "",
+          "example": "42301810754448104001",
           "type": "string"
         },
         "hashtagList": {
           "description": "",
+          "example": [
+            {
+              "hashtag": "tag1"
+            },
+            {
+              "hashtag": "martha1"
+            },
+            {
+              "hashtag": "martha2"
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/HashtagList"
@@ -2864,10 +2914,14 @@
     },
     "HashtagList": {
       "title": "HashtagList",
+      "example": {
+        "hashtag": "tag1"
+      },
       "type": "object",
       "properties": {
         "hashtag": {
           "description": "",
+          "example": "tag1",
           "type": "string"
         }
       },
@@ -2895,24 +2949,36 @@
       "properties": {
         "movementNumber": {
           "description": "",
+          "example": "1000",
           "type": "string"
         },
         "valueDate": {
           "description": "",
+          "example": 1465479748000,
           "type": "integer",
-          "format": "int32"
+          "format": "int64"
         },
         "cuid": {
           "description": "",
+          "example": 12345,
           "type": "integer",
           "format": "int32"
         },
         "accountNumber": {
           "description": "",
+          "example": "42301810754448104001",
           "type": "string"
         },
         "hashtagList": {
           "description": "",
+          "example": [
+            {
+              "hashtag": "tag1"
+            },
+            {
+              "hashtag": "martha"
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/HashtagList"
@@ -2956,19 +3022,23 @@
       "properties": {
         "code": {
           "description": "",
+          "example": "245",
           "type": "string"
         },
         "name": {
           "description": "",
+          "example": ";;> =:>3=8B>",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": 0,
           "type": "integer",
           "format": "int32"
         },
         "categoryCode": {
           "description": "",
+          "example": "1",
           "type": "string"
         },
         "fromDate": {
@@ -2981,28 +3051,43 @@
         },
         "rapidaCode": {
           "description": "",
+          "example": "435",
           "type": "string"
         },
         "beneficiaryAccountId": {
           "description": "",
+          "example": "cyberplat_435",
           "type": "string"
         },
         "minAmount": {
           "description": "",
+          "example": 1,
           "type": "number",
           "format": "double"
         },
         "maxAmount": {
           "description": "",
+          "example": 15000,
           "type": "number",
           "format": "double"
         },
         "disclaimer": {
           "description": "",
+          "example": ">?CAB8<0O AC<<0 ?;0B560: >B 1 4> 15 000 @C1;59.",
           "type": "string"
         },
         "fields": {
           "description": "",
+          "example": [
+            {
+              "name": "><5@ B5;5D>=0",
+              "regexp": "",
+              "tooltip": "><5@ B5;5D>=0 22>48BAO 157 \"8\".",
+              "fieldType": 1,
+              "mapping": "account",
+              "enumValues": {}
+            }
+          ],
           "type": "array",
           "items": {
             "$ref": "#/definitions/Field"
@@ -3026,10 +3111,19 @@
     },
     "Field": {
       "title": "Field",
+      "example": {
+        "name": "><5@ B5;5D>=0",
+        "regexp": "",
+        "tooltip": "><5@ B5;5D>=0 22>48BAO 157 \"8\".",
+        "fieldType": 1,
+        "mapping": "account",
+        "enumValues": {}
+      },
       "type": "object",
       "properties": {
         "name": {
           "description": "",
+          "example": "><5@ B5;5D>=0",
           "type": "string"
         },
         "regexp": {
@@ -3038,19 +3132,23 @@
         },
         "tooltip": {
           "description": "",
+          "example": "><5@ B5;5D>=0 22>48BAO 157 \"8\".",
           "type": "string"
         },
         "fieldType": {
           "description": "",
+          "example": 1,
           "type": "integer",
           "format": "int32"
         },
         "mapping": {
           "description": "",
+          "example": "account",
           "type": "string"
         },
         "enumValues": {
           "description": "",
+          "example": {},
           "type": "object"
         }
       },
@@ -3080,24 +3178,29 @@
       "properties": {
         "amount": {
           "description": "",
+          "example": 11.11,
           "type": "number",
           "format": "double"
         },
         "paymentDate": {
           "description": "",
+          "example": "1486328400000",
           "type": "string"
         },
         "currencyCode": {
           "description": "",
+          "example": "RUR",
           "type": "string"
         },
         "status": {
           "description": "",
+          "example": 0,
           "type": "integer",
           "format": "int32"
         },
         "account": {
           "description": "",
+          "example": "40817810911118101016",
           "type": "string"
         },
         "beneficiaryCode": {
@@ -3105,7 +3208,10 @@
           "type": "string"
         },
         "fieldValues": {
-          "$ref": "#/definitions/FieldValues"
+          "$ref": "#/definitions/FieldValues",
+          "example": {
+            "cardNumber": "4704515446716803"
+          }
         }
       },
       "required": [
@@ -3120,10 +3226,14 @@
     },
     "FieldValues": {
       "title": "FieldValues",
+      "example": {
+        "cardNumber": "4704515446716803"
+      },
       "type": "object",
       "properties": {
         "cardNumber": {
           "description": "",
+          "example": "4704515446716803",
           "type": "string"
         }
       },
@@ -3142,15 +3252,18 @@
       "properties": {
         "transactionId": {
           "description": "",
+          "example": 14219212,
           "type": "integer",
           "format": "int32"
         },
         "templateName": {
           "description": "",
+          "example": "8;09=",
           "type": "string"
         },
         "otp": {
           "description": "",
+          "example": "11111111",
           "type": "string"
         }
       },
