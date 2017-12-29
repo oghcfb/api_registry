@@ -2182,7 +2182,15 @@
           },
           "400": {
             "description": "Bad Request",
-            "schema": {}
+            "schema": {
+              "$ref": "#/definitions/BeneficiaryErrorResponse"
+            },
+            "examples": {
+              "application/json": {
+                "errorMessage": "categoryCode not found",
+                "fieldCode": "categoryCode"
+              }
+            }
           }
         },
         "security": [],
@@ -2267,8 +2275,7 @@
             "description": ""
           },
           "400": {
-            "description": "Bad Request",
-            "schema": {}
+            "description": "Bad Request"
           }
         },
         "security": [],
@@ -2652,13 +2659,7 @@
           "type": "string"
         },
         "params": {
-          "$ref": "#/definitions/Params",
-          "example": {
-            "ZHKH_PROPS_KIND": "!",
-            "ZHKH_PROPS_VALUE": "1201123456",
-            "ZHKH_PAYMENT_MONTH": "05",
-            "ZHKH_PAYMENT_YEAR": "2015"
-          }
+          "$ref": "#/definitions/Params"
         }
       },
       "required": [
@@ -2993,6 +2994,30 @@
         "hashtagList"
       ]
     },
+    "BeneficiaryErrorResponse": {
+      "title": "beneficiaryErrorResponse",
+      "example": {
+        "errorMessage": "categoryCode not found",
+        "fieldCode": "categoryCode"
+      },
+      "type": "object",
+      "properties": {
+        "errorMessage": {
+          "description": "",
+          "example": "categoryCode not found",
+          "type": "string"
+        },
+        "fieldCode": {
+          "description": "",
+          "example": "categoryCode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "errorMessage",
+        "fieldCode"
+      ]
+    },
     "BeneficiaryResponse": {
       "title": "beneficiaryResponse",
       "example": {
@@ -3208,10 +3233,7 @@
           "type": "string"
         },
         "fieldValues": {
-          "$ref": "#/definitions/FieldValues",
-          "example": {
-            "cardNumber": "4704515446716803"
-          }
+          "$ref": "#/definitions/FieldValues"
         }
       },
       "required": [
