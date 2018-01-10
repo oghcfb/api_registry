@@ -2160,8 +2160,8 @@
                 "name": ";;> =:>3=8B>",
                 "status": 0,
                 "categoryCode": "1",
-                "fromDate": "null",
-                "toDate": "null",
+                "fromDate": null,
+                "toDate": null,
                 "rapidaCode": "435",
                 "beneficiaryAccountId": "cyberplat_435",
                 "minAmount": 1.0,
@@ -2567,7 +2567,7 @@
         "amount": 100,
         "accountFrom": "40817810311118101001",
         "description": "07=0G5=85",
-        "taxAmount": "null",
+        "taxAmount": null,
         "params": {
           "ZHKH_PROPS_KIND": "!",
           "ZHKH_PROPS_VALUE": "1201123456",
@@ -2600,8 +2600,7 @@
           "type": "string"
         },
         "taxAmount": {
-          "description": "",
-          "type": "string"
+          "description": ""
         },
         "params": {
           "$ref": "#/definitions/Params"
@@ -2970,8 +2969,8 @@
         "name": ";;> =:>3=8B>",
         "status": 0,
         "categoryCode": "1",
-        "fromDate": "null",
-        "toDate": "null",
+        "fromDate": null,
+        "toDate": null,
         "rapidaCode": "435",
         "beneficiaryAccountId": "cyberplat_435",
         "minAmount": 1.0,
@@ -3012,12 +3011,10 @@
           "type": "string"
         },
         "fromDate": {
-          "description": "",
-          "type": "string"
+          "description": ""
         },
         "toDate": {
-          "description": "",
-          "type": "string"
+          "description": ""
         },
         "rapidaCode": {
           "description": "",
@@ -3133,17 +3130,6 @@
     },
     "CreatePaymentRequest": {
       "title": "createPaymentRequest",
-      "example": {
-        "amount": 11.11,
-        "paymentDate": "1486328400000",
-        "currencyCode": "RUR",
-        "status": 0,
-        "account": "40817810911118101016",
-        "beneficiaryCode": "undefined",
-        "fieldValues": {
-          "cardNumber": "4704515446716803"
-        }
-      },
       "type": "object",
       "properties": {
         "amount": {
@@ -3174,8 +3160,7 @@
           "type": "string"
         },
         "beneficiaryCode": {
-          "description": "",
-          "type": "string"
+          "description": ""
         },
         "fieldValues": {
           "$ref": "#/definitions/FieldValues"
