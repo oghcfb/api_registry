@@ -3,11 +3,7 @@
   "info": {
     "version": "1.0",
     "title": "HomeCredit 2",
-    "description": "TODO: Add Description",
-    "license": {
-      "name": "MIT",
-      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
-    }
+    "description": "TODO: Add Description"
   },
   "host": "https:",
   "basePath": "//balancer-gateway-it-test2.omni.homecredit.ru:8112/oauth",
