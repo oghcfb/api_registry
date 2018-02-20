@@ -63,7 +63,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/>;CG5=85">:5=0>O>ABC?0!5@28A0<response"
+              "$ref": "#/definitions/200"
             },
             "examples": {
               "application/json": {
@@ -2148,7 +2148,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/BeneficiaryResponse"
+              "$ref": "#/definitions/OneBeneficiary"
             },
             "examples": {
               "application/json": {
@@ -2179,7 +2179,7 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/BeneficiaryErrorResponse"
+              "$ref": "#/definitions/CategoryNotFouund"
             },
             "examples": {
               "application/json": {
@@ -2361,8 +2361,8 @@
     }
   },
   "definitions": {
-    ">;CG5=85">:5=0>O>ABC?0!5@28A0<response": {
-      "title": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<Response",
+    "200": {
+      "title": "200",
       "example": {
         "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
         "token_type": "bearer",
@@ -2965,8 +2965,8 @@
         "hashtagList"
       ]
     },
-    "BeneficiaryErrorResponse": {
-      "title": "beneficiaryErrorResponse",
+    "CategoryNotFouund": {
+      "title": "Category not fouund",
       "example": {
         "errorMessage": "categoryCode not found",
         "fieldCode": "categoryCode"
@@ -2989,8 +2989,8 @@
         "fieldCode"
       ]
     },
-    "BeneficiaryResponse": {
-      "title": "beneficiaryResponse",
+    "OneBeneficiary": {
+      "title": "one beneficiary",
       "example": {
         "code": "245",
         "name": ";;> =:>3=8B>",
