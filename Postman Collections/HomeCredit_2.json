@@ -2271,7 +2271,8 @@
             "description": ""
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad Request",
+            "schema": {}
           }
         },
         "security": [],
