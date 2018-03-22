@@ -2628,7 +2628,8 @@
           "type": "string"
         },
         "taxAmount": {
-          "description": ""
+          "description": "",
+          "type": "null"
         },
         "params": {
           "$ref": "#/definitions/Params"
@@ -3039,10 +3040,12 @@
           "type": "string"
         },
         "fromDate": {
-          "description": ""
+          "description": "",
+          "type": "null"
         },
         "toDate": {
-          "description": ""
+          "description": "",
+          "type": "null"
         },
         "rapidaCode": {
           "description": "",
@@ -3188,7 +3191,8 @@
           "type": "string"
         },
         "beneficiaryCode": {
-          "description": ""
+          "description": "",
+          "type": "null"
         },
         "fieldValues": {
           "$ref": "#/definitions/FieldValues"
