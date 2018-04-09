@@ -50,13 +50,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -109,13 +102,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -134,8 +120,7 @@
               "method": "POST",
               "uri": "/ClientRelatedWSProxy",
               "headers": {
-                "Content-Type": "text/xml",
-                "Authorization": "Basic b3NicnVfZm9yX21vYjpvc2JydV9mb3JfbW9i"
+                "Content-Type": "text/xml"
               }
             },
             "expectedResponse": {
@@ -171,29 +156,22 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/catalogs/feetype",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/catalogs/feetype"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -228,29 +206,22 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/filteredAccounts",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/filteredAccounts"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -285,29 +256,22 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/limit",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/limit"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -351,13 +315,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -370,15 +327,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "PUT",
               "uri": "/limit",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"limits\":[{\"bot\":\"4.31.01.16\",\"value\":10000}]}"
             },
@@ -426,13 +386,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -445,7 +398,11 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -482,13 +439,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -496,15 +446,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/cardDpo/create",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"accountFrom\":\"40817810911118101016\",\"targetCardNumber\":\"4166229450914210\",\"amount\":22,\"currency\":\"RUR\"}"
             },
@@ -552,13 +505,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -571,15 +517,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/fromTemplate/create",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"templateId\":22061,\"accountFrom\":\"40817810911118101016\",\"amount\":100}"
             },
@@ -627,13 +576,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -646,15 +588,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/fromTemplateDPO/create",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"templateId\":22033,\"amount\":100,\"accountFrom\":\"40817810311118101001\",\"description\":\"123\",\"taxAmount\":200}"
             },
@@ -702,13 +647,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -721,15 +659,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/confirm",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"transactionId\":14221308,\"otp\":\"11111111\"}"
             },
@@ -766,29 +707,22 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/payment/paymentTemplates",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/payment/paymentTemplates"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -831,13 +765,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -845,15 +772,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/payment/paymentTemplateDetail?templateId=9976",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/payment/paymentTemplateDetail?templateId=9976"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -897,13 +825,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -916,14 +837,17 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/payment/templates?bot=4.31.01.16",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ",
                 "Content-Type": "application/json"
               }
             },
@@ -969,13 +893,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -988,15 +905,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "DELETE",
               "uri": "/payment/templates",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"templateId\":22014}"
             },
@@ -1041,13 +961,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1055,15 +968,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/payment/paymentFields?operationCode=6058",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/payment/paymentFields?operationCode=6058"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1121,13 +1035,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1135,15 +1042,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/payment/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1189,13 +1097,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1208,15 +1109,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/templateName",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"templateId\":22092,\"templateName\":\"=CB@8 10=:0_=5 \"}"
             },
@@ -1269,13 +1173,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1283,15 +1180,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/payment/sms",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"transactionId\":14221260}"
             },
@@ -1353,13 +1253,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1372,14 +1265,17 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/paymentHistory?startPosition=0&count=10&businessObjectType=4.31.01.06",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ",
                 "Content-Type": "application/json"
               }
             },
@@ -1481,13 +1377,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1500,14 +1389,17 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
               "uri": "/creditCards/transactions?contractNumber=22228103001&fromDate=2017-02-02&toDate=2017-02-02&isSort=true&startPosition=1&cardNumber=7810322228103001&count=5&accountNumber=40817810311118101001",
               "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ",
                 "Content-Type": "application/json"
               }
             },
@@ -1558,13 +1450,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1572,15 +1457,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\"",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/debitCards/detail?cardNumber=\"5549604369478934\"&contractNumber=\"11118101016\""
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1636,13 +1522,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1650,15 +1529,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\"",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/deposits/detail?contractNumber=\"810754448104001\"&systemCode=TW&branchCode=\"1\""
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1701,13 +1581,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1715,15 +1588,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/hashtag?cuid=12345",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/hashtag?cuid=12345"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1767,13 +1641,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1786,15 +1653,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "PUT",
               "uri": "/hashtag",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"movementNumber\":\"1000\",\"valueDate\":1465479748000,\"cuid\":12345,\"accountNumber\":\"42301810754448104001\",\"hashtagList\":[{\"hashtag\":\"tag1\"},{\"hashtag\":\"martha1\"},{\"hashtag\":\"martha2\"}]}"
             },
@@ -1840,13 +1710,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1859,15 +1722,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "DELETE",
               "uri": "/hashtag",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"movementNumber\":\"1000\",\"valueDate\":1465479748000,\"cuid\":12345,\"accountNumber\":\"42301810754448104001\",\"hashtagList\":[{\"hashtag\":\"tag1\"},{\"hashtag\":\"martha\"}]}"
             },
@@ -1959,13 +1825,6 @@
             "required": true,
             "type": "boolean",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1973,15 +1832,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/debitCards/transactions?accountNumber=40817810911118101016&cardNumber=5549604369478934&fromDate=2017-02-02&toDate=2017-02-02&startPosition=0&count=100&isSort=true"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2071,13 +1931,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -2085,15 +1938,16 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/deposits/transactions?accountNumber=42301810754448104001&cardNumber=1234567890017666&count=100&fromDate=2016-05-09&toDate=2016-05-09&isSort=true&startPosition=0"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2132,13 +1986,6 @@
           {
             "name": "code",
             "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "required": true,
             "type": "string",
             "description": ""
@@ -2189,15 +2036,16 @@
             }
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "GET",
-              "uri": "/gateway/beneficiary/6087",
-              "headers": {
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
-              }
+              "uri": "/gateway/beneficiary/6087"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2252,13 +2100,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -2275,7 +2116,11 @@
             "schema": {}
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
@@ -2307,13 +2152,6 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -2326,15 +2164,18 @@
             "description": ""
           }
         },
-        "security": [],
+        "security": [
+          {
+            "auth": []
+          }
+        ],
         "x-unitTests": [
           {
             "request": {
               "method": "POST",
               "uri": "/gateway/confirmPayment",
               "headers": {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdWlkOjIxODA3NTE2IiwiY3VpZCI6IjIxODA3NTE2Iiwic2NvcGUiOlsiL2FwcGxpY2F0aW9uL3YxIiwiL2NhcmRyZWdpc3RyeS92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL3RyYW5zZmVyL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiXSwiZXhwIjoxNTE1NjgzOTIwLCJqdGkiOiI2MTljMzJkZS0zYzQwLTRkMDUtYjIxZi0wYTZiODVmMWMyMzkiLCJjbGllbnRfaWQiOiJpYnMifQ.TzVEtH-sjMMZmXNu6MHneAHOmOq3t7VeLrsfdmo_gwm7OuR1bqbl0WKCHrBFT-jxi34YiATV-NYxMONyZNioiPWRceDUahFK-eOmO9XVVNLSyUS0A3hj7I55dp7vPB0g5h1CvJMbWJ5q93OQWBlqUzpiB_CJ84WQ1__PDp21q0TWfreYeU12yhVpv8R9VkVU6WifClTpfoivq20wDI7QjID6Kdsa8qrY35fz3v-mWkHmXtA401shpn776_frPFsUqvUrfbHB9dMNRx69PSqTYXzM0ppvlDPWR9jLABx7yyuQRiMnQJanFNn_ov3eQRsB6v8KriNzD3j2tHXr4jWrtQ"
+                "Content-Type": "application/json"
               },
               "body": "{\"transactionId\":14219212,\"templateName\":\"8;09=\",\"otp\":\"11111111\"}"
             },
