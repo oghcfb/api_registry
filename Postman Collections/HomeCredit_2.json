@@ -2121,7 +2121,30 @@
             "auth": []
           }
         ],
-        "x-unitTests": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/gateway/createPayment",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"amount\":11.11,\"paymentDate\":\"1486328400000\",\"currencyCode\":\"RUR\",\"status\":0,\"account\":\"40817810911118101016\",\"beneficiaryCode\":\"undefined\",\"fieldValues\":{\"cardNumber\":\"4704515446716803\"}}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "createPayment",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2470,7 +2493,7 @@
         },
         "taxAmount": {
           "description": "",
-          "type": "null"
+          "type": "string"
         },
         "params": {
           "$ref": "#/definitions/Params"
@@ -2882,11 +2905,11 @@
         },
         "fromDate": {
           "description": "",
-          "type": "null"
+          "type": "string"
         },
         "toDate": {
           "description": "",
-          "type": "null"
+          "type": "string"
         },
         "rapidaCode": {
           "description": "",
@@ -3002,6 +3025,17 @@
     },
     "CreatePaymentRequest": {
       "title": "createPaymentRequest",
+      "example": {
+        "amount": 11.11,
+        "paymentDate": "1486328400000",
+        "currencyCode": "RUR",
+        "status": 0,
+        "account": "40817810911118101016",
+        "beneficiaryCode": "undefined",
+        "fieldValues": {
+          "cardNumber": "4704515446716803"
+        }
+      },
       "type": "object",
       "properties": {
         "amount": {
@@ -3033,7 +3067,7 @@
         },
         "beneficiaryCode": {
           "description": "",
-          "type": "null"
+          "type": "string"
         },
         "fieldValues": {
           "$ref": "#/definitions/FieldValues"
