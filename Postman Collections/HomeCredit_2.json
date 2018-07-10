@@ -102,6 +102,15 @@
             "required": true,
             "type": "string",
             "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -121,7 +130,8 @@
               "uri": "/ClientRelatedWSProxy",
               "headers": {
                 "Content-Type": "text/xml"
-              }
+              },
+              "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://gemini.bsc.cz/ws/ClientRelated/\"> \n   <soapenv:Header/> \n   <soapenv:Body> \n      <cli:modifyRestChannel> \n         <modifyRestChannelRequest> \n            <cuid>21807516</cuid> \n            <status>1</status> \n         </modifyRestChannelRequest> \n      </cli:modifyRestChannel> \n   </soapenv:Body> \n</soapenv:Envelope> "
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -306,6 +316,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -313,13 +330,6 @@
             "schema": {
               "$ref": "#/definitions/{{server}}~1rest~1limitrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -377,6 +387,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -384,13 +401,6 @@
             "schema": {
               "$ref": "#/definitions/Ownaccounts~1createrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -425,6 +435,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -432,13 +449,6 @@
             "schema": {
               "$ref": "#/definitions/Carddpo~1createrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -496,6 +506,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -503,13 +520,6 @@
             "schema": {
               "$ref": "#/definitions/Fromtemplate~1createrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -567,6 +577,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -574,13 +591,6 @@
             "schema": {
               "$ref": "#/definitions/Fromtemplatedpo~1createrequest12"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -638,6 +648,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -645,13 +662,6 @@
             "schema": {
               "$ref": "#/definitions/ConfirmRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -884,6 +894,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -891,13 +908,6 @@
             "schema": {
               "$ref": "#/definitions/DeletePayment~1templatesrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1088,6 +1098,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -1095,13 +1112,6 @@
             "schema": {
               "$ref": "#/definitions/TemplateNameRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1159,6 +1169,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -1166,13 +1183,6 @@
             "schema": {
               "$ref": "#/definitions/Payment~1smsrequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1632,6 +1642,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -1639,13 +1656,6 @@
             "schema": {
               "$ref": "#/definitions/AddHashtagRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1701,6 +1711,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -1708,13 +1725,6 @@
             "schema": {
               "$ref": "#/definitions/DeleteHashtagRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -2091,6 +2101,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -2098,13 +2115,6 @@
             "schema": {
               "$ref": "#/definitions/CreatePaymentRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -2166,6 +2176,13 @@
         ],
         "parameters": [
           {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -2173,13 +2190,6 @@
             "schema": {
               "$ref": "#/definitions/ConfirmPaymentRequest"
             }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
