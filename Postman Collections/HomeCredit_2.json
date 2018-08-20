@@ -413,7 +413,30 @@
             "auth": []
           }
         ],
-        "x-unitTests": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/payment/ownAccounts/create",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"accountFrom\":40817810911118101016,\"accountTo\":40817810311118101001,\"amount\":10000000000000,\"currency\":\"RUR\",\"templateName\":\"564 A2>8<8 4\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "ownAccounts/create",
+            "x-testDescription": "!>740=85 ?5@52>40 <564C A2>8<8 AG5B0<8 (2>7<>6=> A A>E@0=5=85< H01;>=0)"
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
