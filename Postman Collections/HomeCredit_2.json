@@ -6,12 +6,9 @@
   },
   "item": [
     {
-      "_postman_id": "1122592-9b7b3679-8db9-4b5e-db29-aa13b5a8198e",
       "name": "1_>43>B>28B5;L=K5 H038",
-      "description": "-B8 H038 =5>1E>48<> 2K?>;=8BL  2K7>20 ;N1>3> REST A5@28A0 IBS.\n\n-B> 5ABL:\n1. ?@>25@:0 - 0:B820F8O :0=0;0 REST C 40==>3> :;85=B0. ?@>2>48BAO 2 A8AB5<5 IBS, G5@57 SOAP A5@28A\n2. ?>;CG5=85 oAuth2 B>:5=0 4;O 40==>3> :;85=B0, :>B>@K9 1C45B 8A?>;L720BLAO 2 ?@F5AA5 02B>@870F88 ?@8 ;N1>< 4>ABC?5 : REST A5@28A0< IBS\n\n",
       "item": [
         {
-          "_postman_id": "1122592-4de8b063-2337-e833-4b63-2a724292ca83",
           "name": ">;CG5=85 B>:5=0 4>O 4>ABC?0 : A5@28A0<",
           "event": [
             {
@@ -37,6 +34,7 @@
               }
             }
           ],
+          "_postman_id": "1122592-4de8b063-2337-e833-4b63-2a724292ca83",
           "request": {
             "auth": {
               "type": "basic",
@@ -92,13 +90,11 @@
               "query": [
                 {
                   "key": "grant_type",
-                  "value": "client_credentials",
-                  "equals": true
+                  "value": "client_credentials"
                 },
                 {
                   "key": "cuid",
-                  "value": "21807516",
-                  "equals": true
+                  "value": "21807516"
                 }
               ]
             },
@@ -109,11 +105,7 @@
               "id": "1122592-1bb3230a-d206-92a6-95aa-abea79e92e09",
               "name": "200",
               "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
+                "header": []
               },
               "status": "OK",
               "code": 200,
@@ -169,7 +161,6 @@
           ]
         },
         {
-          "_postman_id": "1122592-2247c8d6-bc34-0bd5-5c8b-98bc2e0058fa",
           "name": ":B820F8O rest channel :;8B5=B0 2 A8AB5<5 IBS",
           "event": [
             {
@@ -184,6 +175,7 @@
               }
             }
           ],
+          "_postman_id": "1122592-2247c8d6-bc34-0bd5-5c8b-98bc2e0058fa",
           "request": {
             "auth": {
               "type": "basic",
@@ -214,22 +206,21 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-9b7b3679-8db9-4b5e-db29-aa13b5a8198e",
+      "description": "-B8 H038 =5>1E>48<> 2K?>;=8BL  2K7>20 ;N1>3> REST A5@28A0 IBS.\n\n-B> 5ABL:\n1. ?@>25@:0 - 0:B820F8O :0=0;0 REST C 40==>3> :;85=B0. ?@>2>48BAO 2 A8AB5<5 IBS, G5@57 SOAP A5@28A\n2. ?>;CG5=85 oAuth2 B>:5=0 4;O 40==>3> :;85=B0, :>B>@K9 1C45B 8A?>;L720BLAO 2 ?@F5AA5 02B>@870F88 ?@8 ;N1>< 4>ABC?5 : REST A5@28A0< IBS\n\n"
     },
     {
-      "_postman_id": "1122592-1765a380-96e0-877a-667a-0a64372acfd7",
       "name": "2_!>740=85 =>2>3> ?;0B560 ?>;=K9 ?@>F5AA",
-      "description": "",
-      "item": []
+      "item": [],
+      "_postman_id": "1122592-1765a380-96e0-877a-667a-0a64372acfd7"
     },
     {
-      "_postman_id": "1122592-ca42b055-942c-f792-75e1-818c9abf9a1a",
       "name": "CatalogService",
-      "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C",
       "item": [
         {
-          "_postman_id": "1122592-3a0b6e48-009c-30df-14c5-1d7e5cc5e586",
           "name": "catalogs",
+          "_postman_id": "1122592-3a0b6e48-009c-30df-14c5-1d7e5cc5e586",
           "request": {
             "method": "GET",
             "header": [
@@ -243,22 +234,25 @@
                 "disabled": true
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "http://os-2023:7003/rest/catalogs/feetype",
             "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C\nPRODUCTTYPE - :>4 :0B0;>30 87 GFO_CATALOGTYPE, <>65B 1KBL ;N1K<\n\n@>25@:0 7=0G5=89 ?> >B25BC <>6=> ?@>25@8BL 2 04<8=:5 (4<8=8AB@8@>20=85/!?@02>G=8:8/0B0;>3 (K1@0BL 87 2K?040NI53> A?8A:0))"
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-ca42b055-942c-f792-75e1-818c9abf9a1a",
+      "description": ">;CG5=85 A?8A:0 M;5<5=B>2 :0B0;>30 ?> 53> :>4C"
     },
     {
-      "_postman_id": "1122592-c9ed9fa0-170d-64be-7240-f47e95540a65",
       "name": "CoreAccountService",
-      "description": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : ",
       "item": [
         {
-          "_postman_id": "1122592-10a41752-3612-ca92-fdcd-152aa98becf1",
           "name": "filteredAccounts",
+          "_postman_id": "1122592-10a41752-3612-ca92-fdcd-152aa98becf1",
           "request": {
             "method": "GET",
             "header": [
@@ -276,16 +270,16 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-c9ed9fa0-170d-64be-7240-f47e95540a65",
+      "description": ">;CG5=85 A?8A:0: @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE , @C1;52KE AG5B>2 0:B82=KE ( + 8?>B5G=KE AG5B>2, 5A;8 >=8 ?@82O70=K : "
     },
     {
-      "_postman_id": "1122592-d383b175-b93a-9f86-cab1-8b137cda1f67",
       "name": "Limits",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1122592-7a10764b-7217-7b19-535d-1fef0cac2d16",
           "name": "limit",
+          "_postman_id": "1122592-7a10764b-7217-7b19-535d-1fef0cac2d16",
           "request": {
             "method": "GET",
             "header": [
@@ -303,8 +297,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-3042268c-285e-6332-4dc6-50f2267a1e47",
           "name": "{{server}}/rest/limit",
+          "_postman_id": "1122592-3042268c-285e-6332-4dc6-50f2267a1e47",
           "request": {
             "method": "PUT",
             "header": [
@@ -330,16 +324,15 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-d383b175-b93a-9f86-cab1-8b137cda1f67"
     },
     {
-      "_postman_id": "1122592-84d593b5-dbd1-3c75-7f78-152257be4a34",
       "name": "PaymentService",
-      "description": "",
       "item": [
         {
-          "_postman_id": "1122592-13b716d3-10f0-cfeb-0475-b0b76f3bafeb",
           "name": "ownAccounts/create",
+          "_postman_id": "1122592-13b716d3-10f0-cfeb-0475-b0b76f3bafeb",
           "request": {
             "method": "POST",
             "header": [
@@ -367,8 +360,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-5f9e73f7-47e4-7e75-c228-1dba6622747c",
           "name": "cardDpo/create",
+          "_postman_id": "1122592-5f9e73f7-47e4-7e75-c228-1dba6622747c",
           "request": {
             "method": "POST",
             "header": [
@@ -396,8 +389,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-494bc2d2-9b12-81e6-e0bb-2dbec6b7b653",
           "name": "fromTemplate/create",
+          "_postman_id": "1122592-494bc2d2-9b12-81e6-e0bb-2dbec6b7b653",
           "request": {
             "method": "POST",
             "header": [
@@ -424,8 +417,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-cb385f54-6836-943f-72d3-a1e9484482cf",
           "name": "fromTemplateDPO/create %",
+          "_postman_id": "1122592-cb385f54-6836-943f-72d3-a1e9484482cf",
           "request": {
             "method": "POST",
             "header": [
@@ -452,8 +445,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-f5c3aeb2-b7c7-a5b8-dcef-6511e5e3c087",
           "name": "confirm",
+          "_postman_id": "1122592-f5c3aeb2-b7c7-a5b8-dcef-6511e5e3c087",
           "request": {
             "method": "POST",
             "header": [
@@ -480,8 +473,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-a48db785-3b01-0396-603d-6b89ab2f2f3f",
           "name": "paymentTemplates",
+          "_postman_id": "1122592-a48db785-3b01-0396-603d-6b89ab2f2f3f",
           "request": {
             "method": "GET",
             "header": [
@@ -504,8 +497,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-62598687-ba4f-b7db-4cf4-466b5533206b",
           "name": "paymentTemplateDetail",
+          "_postman_id": "1122592-62598687-ba4f-b7db-4cf4-466b5533206b",
           "request": {
             "method": "GET",
             "header": [
@@ -536,8 +529,7 @@
               "query": [
                 {
                   "key": "templateId",
-                  "value": "9976",
-                  "equals": true
+                  "value": "9976"
                 }
               ]
             }
@@ -545,8 +537,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-68df11b7-74d4-6549-5bdd-138c67059469",
           "name": "templates",
+          "_postman_id": "1122592-68df11b7-74d4-6549-5bdd-138c67059469",
           "request": {
             "method": "GET",
             "header": [
@@ -581,8 +573,7 @@
               "query": [
                 {
                   "key": "bot",
-                  "value": "4.31.01.16",
-                  "equals": true
+                  "value": "4.31.01.16"
                 }
               ]
             }
@@ -590,8 +581,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-82deeb1a-217f-64df-a15c-8fb491b8bbef",
           "name": "paymentFields",
+          "_postman_id": "1122592-82deeb1a-217f-64df-a15c-8fb491b8bbef",
           "request": {
             "method": "GET",
             "header": [
@@ -623,8 +614,7 @@
               "query": [
                 {
                   "key": "operationCode",
-                  "value": "6058",
-                  "equals": true
+                  "value": "6058"
                 }
               ]
             }
@@ -632,8 +622,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-54a6cc44-8c08-648a-a390-8403eae358d4",
           "name": "paymentHistory",
+          "_postman_id": "1122592-54a6cc44-8c08-648a-a390-8403eae358d4",
           "request": {
             "method": "GET",
             "header": [
@@ -664,18 +654,15 @@
               "query": [
                 {
                   "key": "startPosition",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "count",
-                  "value": "10",
-                  "equals": true
+                  "value": "10"
                 },
                 {
                   "key": "businessObjectType",
-                  "value": "4.31.01.06",
-                  "equals": true
+                  "value": "4.31.01.06"
                 }
               ]
             }
@@ -683,8 +670,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-b44de0b9-d1a9-233f-6d02-e617d31901b9",
           "name": "templateName",
+          "_postman_id": "1122592-b44de0b9-d1a9-233f-6d02-e617d31901b9",
           "request": {
             "method": "POST",
             "header": [
@@ -711,8 +698,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-4dd79c31-b0b8-649d-f5b4-3706cbcaada7",
           "name": "payment/sms",
+          "_postman_id": "1122592-4dd79c31-b0b8-649d-f5b4-3706cbcaada7",
           "request": {
             "method": "POST",
             "header": [
@@ -739,8 +726,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-e34fabbc-e42f-bb4d-318d-ac8045986465",
           "name": "DELETE payment/templates",
+          "_postman_id": "1122592-e34fabbc-e42f-bb4d-318d-ac8045986465",
           "request": {
             "method": "DELETE",
             "header": [
@@ -767,8 +754,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-52b0f05f-3dc5-478a-31c9-37941307b549",
           "name": "fromTemplateDPO/create",
+          "_postman_id": "1122592-52b0f05f-3dc5-478a-31c9-37941307b549",
           "request": {
             "method": "POST",
             "header": [
@@ -795,8 +782,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-59066722-0f30-84fa-6081-f970d5d279ba",
           "name": "paymentHistory copy",
+          "_postman_id": "1122592-59066722-0f30-84fa-6081-f970d5d279ba",
           "request": {
             "method": "GET",
             "header": [
@@ -832,34 +819,30 @@
               "query": [
                 {
                   "key": "startPosition",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "count",
-                  "value": "10",
-                  "equals": true
+                  "value": "10"
                 },
                 {
                   "key": "businessObjectType",
-                  "value": "4.31.01.06",
-                  "equals": true
+                  "value": "4.31.01.06"
                 }
               ]
             }
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-84d593b5-dbd1-3c75-7f78-152257be4a34"
     },
     {
-      "_postman_id": "1122592-0cf78403-b790-17d5-7a28-fd935cc63e01",
       "name": "ProductService",
-      "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)",
       "item": [
         {
-          "_postman_id": "1122592-6a787f8c-a220-a9fc-5ee0-587e2e93c1d1",
           "name": "creditCardsTransactions",
+          "_postman_id": "1122592-6a787f8c-a220-a9fc-5ee0-587e2e93c1d1",
           "request": {
             "method": "GET",
             "header": [
@@ -894,43 +877,35 @@
               "query": [
                 {
                   "key": "contractNumber",
-                  "value": "22228103001",
-                  "equals": true
+                  "value": "22228103001"
                 },
                 {
                   "key": "fromDate",
-                  "value": "2017-02-02",
-                  "equals": true
+                  "value": "2017-02-02"
                 },
                 {
                   "key": "toDate",
-                  "value": "2017-02-02",
-                  "equals": true
+                  "value": "2017-02-02"
                 },
                 {
                   "key": "isSort",
-                  "value": "true",
-                  "equals": true
+                  "value": "true"
                 },
                 {
                   "key": "startPosition",
-                  "value": "1",
-                  "equals": true
+                  "value": "1"
                 },
                 {
                   "key": "cardNumber",
-                  "value": "7810322228103001",
-                  "equals": true
+                  "value": "7810322228103001"
                 },
                 {
                   "key": "count",
-                  "value": "5",
-                  "equals": true
+                  "value": "5"
                 },
                 {
                   "key": "accountNumber",
-                  "value": "40817810311118101001",
-                  "equals": true
+                  "value": "40817810311118101001"
                 }
               ]
             },
@@ -939,8 +914,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-23a44d9b-c40c-6d9b-3ca9-80bfc25edf69",
           "name": "debitCardDetails",
+          "_postman_id": "1122592-23a44d9b-c40c-6d9b-3ca9-80bfc25edf69",
           "request": {
             "method": "GET",
             "header": [
@@ -966,13 +941,11 @@
               "query": [
                 {
                   "key": "cardNumber",
-                  "value": "\"5549604369478934\"",
-                  "equals": true
+                  "value": "\"5549604369478934\""
                 },
                 {
                   "key": "contractNumber",
-                  "value": "\"11118101016\"",
-                  "equals": true
+                  "value": "\"11118101016\""
                 }
               ]
             },
@@ -981,8 +954,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-640f7526-5941-9292-c14d-9954ee46711f",
           "name": "deposits/detail",
+          "_postman_id": "1122592-640f7526-5941-9292-c14d-9954ee46711f",
           "request": {
             "method": "GET",
             "header": [
@@ -1008,18 +981,15 @@
               "query": [
                 {
                   "key": "contractNumber",
-                  "value": "\"810754448104001\"",
-                  "equals": true
+                  "value": "\"810754448104001\""
                 },
                 {
                   "key": "systemCode",
-                  "value": "TW",
-                  "equals": true
+                  "value": "TW"
                 },
                 {
                   "key": "branchCode",
-                  "value": "\"1\"",
-                  "equals": true
+                  "value": "\"1\""
                 }
               ]
             },
@@ -1028,8 +998,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-e2adfd4b-a9c6-de92-8f9d-f203d5fc77ab",
           "name": "addHashtag",
+          "_postman_id": "1122592-e2adfd4b-a9c6-de92-8f9d-f203d5fc77ab",
           "request": {
             "method": "PUT",
             "header": [
@@ -1051,8 +1021,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-3a9a5d3a-7bc8-9aa1-2215-5caba630258a",
           "name": "getHashtag",
+          "_postman_id": "1122592-3a9a5d3a-7bc8-9aa1-2215-5caba630258a",
           "request": {
             "method": "GET",
             "header": [
@@ -1077,8 +1047,7 @@
               "query": [
                 {
                   "key": "cuid",
-                  "value": "12345",
-                  "equals": true
+                  "value": "12345"
                 }
               ]
             }
@@ -1086,8 +1055,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-648f2984-937e-41b2-4c7d-2d3c49d09999",
           "name": "deleteHashtag",
+          "_postman_id": "1122592-648f2984-937e-41b2-4c7d-2d3c49d09999",
           "request": {
             "method": "DELETE",
             "header": [
@@ -1109,8 +1078,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-76579972-172b-8a8d-6cd0-ef423373d0a8",
           "name": "debitCards/transactions",
+          "_postman_id": "1122592-76579972-172b-8a8d-6cd0-ef423373d0a8",
           "request": {
             "method": "GET",
             "header": [
@@ -1141,38 +1110,31 @@
               "query": [
                 {
                   "key": "accountNumber",
-                  "value": "40817810911118101016",
-                  "equals": true
+                  "value": "40817810911118101016"
                 },
                 {
                   "key": "cardNumber",
-                  "value": "5549604369478934",
-                  "equals": true
+                  "value": "5549604369478934"
                 },
                 {
                   "key": "fromDate",
-                  "value": "2017-02-02",
-                  "equals": true
+                  "value": "2017-02-02"
                 },
                 {
                   "key": "toDate",
-                  "value": "2017-02-02",
-                  "equals": true
+                  "value": "2017-02-02"
                 },
                 {
                   "key": "startPosition",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "count",
-                  "value": "100",
-                  "equals": true
+                  "value": "100"
                 },
                 {
                   "key": "isSort",
-                  "value": "true",
-                  "equals": true
+                  "value": "true"
                 }
               ]
             },
@@ -1181,8 +1143,8 @@
           "response": []
         },
         {
-          "_postman_id": "1122592-fca9fc6f-150d-7122-a6d0-c99c103f2d3a",
           "name": "deposits/transactions",
+          "_postman_id": "1122592-fca9fc6f-150d-7122-a6d0-c99c103f2d3a",
           "request": {
             "method": "GET",
             "header": [
@@ -1213,48 +1175,42 @@
               "query": [
                 {
                   "key": "accountNumber",
-                  "value": "42301810754448104001",
-                  "equals": true
+                  "value": "42301810754448104001"
                 },
                 {
                   "key": "cardNumber",
-                  "value": "1234567890017666",
-                  "equals": true
+                  "value": "1234567890017666"
                 },
                 {
                   "key": "count",
-                  "value": "100",
-                  "equals": true
+                  "value": "100"
                 },
                 {
                   "key": "fromDate",
-                  "value": "2016-05-09",
-                  "equals": true
+                  "value": "2016-05-09"
                 },
                 {
                   "key": "toDate",
-                  "value": "2016-05-09",
-                  "equals": true
+                  "value": "2016-05-09"
                 },
                 {
                   "key": "isSort",
-                  "value": "true",
-                  "equals": true
+                  "value": "true"
                 },
                 {
                   "key": "startPosition",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 }
               ]
             }
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "1122592-0cf78403-b790-17d5-7a28-fd935cc63e01",
+      "description": ">;CG5=85 A?8A:0 :@0A82KE B@0=70:F89 ?> :@548B=>9 :0@B5 (87 <>:0 AccountsWS-getCreditCardTransactions)"
     },
     {
-      "_postman_id": "1122592-2f015c12-8654-7a6c-e589-12fd20fa9864",
       "name": "beneficiary",
       "event": [
         {
@@ -1284,6 +1240,7 @@
           }
         }
       ],
+      "_postman_id": "1122592-2f015c12-8654-7a6c-e589-12fd20fa9864",
       "request": {
         "method": "GET",
         "header": [
@@ -1315,7 +1272,8 @@
           "variable": [
             {
               "key": "code",
-              "value": "6087"
+              "value": "6087",
+              "type": "string"
             }
           ]
         }
@@ -1401,11 +1359,7 @@
           "id": "1122592-e9056d8c-5aac-271c-cf24-e4d0656162b8",
           "name": "one beneficiary",
           "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
+            "header": []
           },
           "status": "OK",
           "code": 200,
@@ -1461,7 +1415,6 @@
       ]
     },
     {
-      "_postman_id": "1122592-a508ad2d-eff0-099f-dae0-34634c4cafda",
       "name": "createPayment",
       "event": [
         {
@@ -1478,6 +1431,7 @@
           }
         }
       ],
+      "_postman_id": "1122592-a508ad2d-eff0-099f-dae0-34634c4cafda",
       "request": {
         "method": "POST",
         "header": [
@@ -1506,11 +1460,7 @@
           "id": "1122592-7a9099c5-e534-8764-3ace-ea1c6f98ec98",
           "name": "400",
           "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
+            "header": []
           },
           "status": "Bad Request",
           "code": 400,
@@ -1548,8 +1498,8 @@
       ]
     },
     {
-      "_postman_id": "1122592-edcb3ded-8238-ca0f-b4c9-9558a8c0574c",
       "name": "confirmPayment",
+      "_postman_id": "1122592-edcb3ded-8238-ca0f-b4c9-9558a8c0574c",
       "request": {
         "method": "POST",
         "header": [
