@@ -1022,7 +1022,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
@@ -1030,7 +1029,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
@@ -1375,7 +1373,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
@@ -1383,7 +1380,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
@@ -1472,7 +1468,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
@@ -1480,7 +1475,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": ""
           },
           {
