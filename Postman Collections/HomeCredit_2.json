@@ -51,13 +51,6 @@
             "type": "integer",
             "format": "int32",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -103,12 +96,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/ClientRelatedWSProxy": {
@@ -132,13 +120,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -153,12 +134,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/catalogs/feetype": {
@@ -188,11 +164,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/filteredAccounts": {
@@ -222,11 +194,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/limit": {
@@ -256,11 +224,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       },
       "put": {
         "description": "TODO: Add Description",
@@ -304,11 +268,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/ownAccounts/create": {
@@ -354,11 +314,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/cardDpo/create": {
@@ -404,11 +360,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/fromTemplate/create": {
@@ -454,11 +406,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/fromTemplateDPO/create": {
@@ -504,11 +452,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/confirm": {
@@ -554,11 +498,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/paymentTemplates": {
@@ -588,11 +528,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/paymentTemplateDetail": {
@@ -630,11 +566,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/templates": {
@@ -678,11 +610,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       },
       "delete": {
         "description": "TODO: Add Description",
@@ -726,11 +654,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/paymentFields": {
@@ -768,11 +692,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/paymentHistory": {
@@ -825,11 +745,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/templateName": {
@@ -875,11 +791,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/payment/sms": {
@@ -925,11 +837,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/paymentHistory": {
@@ -989,11 +897,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/creditCards/transactions": {
@@ -1091,11 +995,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/debitCards/detail": {
@@ -1139,11 +1039,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/deposits/detail": {
@@ -1194,11 +1090,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/hashtag": {
@@ -1244,11 +1136,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       },
       "get": {
         "description": "TODO: Add Description",
@@ -1284,11 +1172,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       },
       "delete": {
         "description": "TODO: Add Description",
@@ -1332,11 +1216,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/debitCards/transactions": {
@@ -1419,11 +1299,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/deposits/transactions": {
@@ -1506,11 +1382,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/gateway/beneficiary/{code}": {
@@ -1613,11 +1485,7 @@
             }
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/gateway/createPayment": {
@@ -1667,11 +1535,7 @@
             "schema": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     },
     "/gateway/confirmPayment": {
@@ -1717,11 +1581,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        "security": []
       }
     }
   },
@@ -2445,6 +2305,11 @@
       ]
     }
   },
+  "security": [
+    {
+      "auth": []
+    }
+  ],
   "tags": [
     {
       "name": "1_>43>B>28B5;L=K5 H038",
