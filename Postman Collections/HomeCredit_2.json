@@ -31,7 +31,7 @@
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
         ],
-        "operationId": "TokenPost",
+        "operationId": ">;CG5=85B>:5=04>O4>ABC?0:A5@28A0<",
         "deprecated": false,
         "produces": [
           "application/json;charset=UTF-8"
@@ -106,7 +106,7 @@
         "tags": [
           "1_>43>B>28B5;L=K5 H038"
         ],
-        "operationId": "ClientRelatedWSProxyPost",
+        "operationId": ":B820F8Orestchannel:;8B5=B02A8AB5<5IBS",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -144,7 +144,7 @@
         "tags": [
           "CatalogService"
         ],
-        "operationId": "CatalogsFeetypeGet",
+        "operationId": "catalogs",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -174,7 +174,7 @@
         "tags": [
           "CoreAccountService"
         ],
-        "operationId": "FilteredAccountsGet",
+        "operationId": "filteredAccounts",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -204,7 +204,7 @@
         "tags": [
           "Limits"
         ],
-        "operationId": "LimitGet",
+        "operationId": "limit",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -232,7 +232,7 @@
         "tags": [
           "Limits"
         ],
-        "operationId": "LimitPut",
+        "operationId": "{{server}}/rest/limit",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -278,7 +278,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentOwnAccountsCreatePost",
+        "operationId": "ownAccounts/create",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -324,7 +324,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentCardDpoCreatePost",
+        "operationId": "cardDpo/create",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -370,7 +370,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentFromTemplateCreatePost",
+        "operationId": "fromTemplate/create",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -416,7 +416,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentFromTemplateDPOCreatePost",
+        "operationId": "fromTemplateDPO/create%",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -462,7 +462,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentConfirmPost",
+        "operationId": "confirm",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -508,7 +508,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentPaymentTemplatesGet",
+        "operationId": "paymentTemplates",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -538,7 +538,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentPaymentTemplateDetailGet",
+        "operationId": "paymentTemplateDetail",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -576,7 +576,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentTemplatesGet",
+        "operationId": "templates",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -618,7 +618,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentTemplatesDelete",
+        "operationId": "DELETEpayment/templates",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -664,7 +664,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentPaymentFieldsGet",
+        "operationId": "paymentFields",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -702,7 +702,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentPaymentHistoryGet",
+        "operationId": "paymentHistory",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -755,7 +755,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentTemplateNamePost",
+        "operationId": "templateName",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -801,7 +801,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentSmsPost",
+        "operationId": "payment/sms",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -847,7 +847,7 @@
         "tags": [
           "PaymentService"
         ],
-        "operationId": "PaymentHistoryGet",
+        "operationId": "paymentHistorycopy",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -907,7 +907,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "CreditCardsTransactionsGet",
+        "operationId": "creditCardsTransactions",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1005,7 +1005,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "DebitCardsDetailGet",
+        "operationId": "debitCardDetails",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1049,7 +1049,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "DepositsDetailGet",
+        "operationId": "deposits/detail",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1100,7 +1100,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "HashtagPut",
+        "operationId": "addHashtag",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1144,7 +1144,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "HashtagGet",
+        "operationId": "getHashtag",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1180,7 +1180,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "HashtagDelete",
+        "operationId": "deleteHashtag",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1226,7 +1226,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "DebitCardsTransactionsGet",
+        "operationId": "debitCards/transactions",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1309,7 +1309,7 @@
         "tags": [
           "ProductService"
         ],
-        "operationId": "DepositsTransactionsGet",
+        "operationId": "deposits/transactions",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1392,7 +1392,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "GatewayBeneficiaryByCodeGet",
+        "operationId": "beneficiary",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1495,7 +1495,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "GatewayCreatePaymentPost",
+        "operationId": "createPayment",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1545,7 +1545,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "GatewayConfirmPaymentPost",
+        "operationId": "confirmPayment",
         "deprecated": false,
         "produces": [
           "application/json"
