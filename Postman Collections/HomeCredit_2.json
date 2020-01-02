@@ -3,7 +3,6 @@
   "info": {
     "version": "1.0",
     "title": "HomeCredit 2",
-    "description": "TODO: Add Description",
     "contact": {}
   },
   "host": "https:",
@@ -111,6 +110,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/xml"
+        ],
         "parameters": [
           {
             "name": "Content-Type",
@@ -125,7 +127,7 @@
             "required": true,
             "description": "",
             "schema": {
-              "type": "string"
+              "$ref": "#/definitions/Envelope"
             }
           }
         ],
@@ -199,7 +201,6 @@
     },
     "/limit": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "limit",
         "tags": [
           "Limits"
@@ -227,7 +228,6 @@
         "security": []
       },
       "put": {
-        "description": "TODO: Add Description",
         "summary": "{{server}}/rest/limit",
         "tags": [
           "Limits"
@@ -365,7 +365,6 @@
     },
     "/payment/fromTemplate/create": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "fromTemplate/create",
         "tags": [
           "PaymentService"
@@ -411,7 +410,6 @@
     },
     "/payment/fromTemplateDPO/create": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "fromTemplateDPO/create %",
         "tags": [
           "PaymentService"
@@ -457,7 +455,6 @@
     },
     "/payment/confirm": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "confirm",
         "tags": [
           "PaymentService"
@@ -503,7 +500,6 @@
     },
     "/payment/paymentTemplates": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "paymentTemplates",
         "tags": [
           "PaymentService"
@@ -533,7 +529,6 @@
     },
     "/payment/paymentTemplateDetail": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "paymentTemplateDetail",
         "tags": [
           "PaymentService"
@@ -571,7 +566,6 @@
     },
     "/payment/templates": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "templates",
         "tags": [
           "PaymentService"
@@ -613,7 +607,6 @@
         "security": []
       },
       "delete": {
-        "description": "TODO: Add Description",
         "summary": "DELETE payment/templates",
         "tags": [
           "PaymentService"
@@ -659,7 +652,6 @@
     },
     "/payment/paymentFields": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "paymentFields",
         "tags": [
           "PaymentService"
@@ -697,7 +689,6 @@
     },
     "/payment/paymentHistory": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "paymentHistory",
         "tags": [
           "PaymentService"
@@ -750,7 +741,6 @@
     },
     "/payment/templateName": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "templateName",
         "tags": [
           "PaymentService"
@@ -796,7 +786,6 @@
     },
     "/payment/sms": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "payment/sms",
         "tags": [
           "PaymentService"
@@ -842,7 +831,6 @@
     },
     "/paymentHistory": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "paymentHistory copy",
         "tags": [
           "PaymentService"
@@ -1095,7 +1083,6 @@
     },
     "/hashtag": {
       "put": {
-        "description": "TODO: Add Description",
         "summary": "addHashtag",
         "tags": [
           "ProductService"
@@ -1139,7 +1126,6 @@
         "security": []
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "getHashtag",
         "tags": [
           "ProductService"
@@ -1175,7 +1161,6 @@
         "security": []
       },
       "delete": {
-        "description": "TODO: Add Description",
         "summary": "deleteHashtag",
         "tags": [
           "ProductService"
@@ -1304,7 +1289,6 @@
     },
     "/deposits/transactions": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "deposits/transactions",
         "tags": [
           "ProductService"
@@ -1387,7 +1371,6 @@
     },
     "/gateway/beneficiary/{code}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "beneficiary",
         "tags": [
           "Misc"
@@ -1490,7 +1473,6 @@
     },
     "/gateway/createPayment": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "createPayment",
         "tags": [
           "Misc"
@@ -1540,7 +1522,6 @@
     },
     "/gateway/confirmPayment": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "confirmPayment",
         "tags": [
           "Misc"
@@ -1625,6 +1606,99 @@
         "scope",
         "cuid",
         "jti"
+      ]
+    },
+    "Envelope": {
+      "title": "Envelope",
+      "xml": {
+        "name": "Envelope",
+        "namespace": "http://schemas.xmlsoap.org/soap/envelope/",
+        "prefix": "soapenv",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "Body": {
+          "$ref": "#/definitions/Body"
+        }
+      },
+      "required": [
+        "Body"
+      ]
+    },
+    "Body": {
+      "title": "Body",
+      "xml": {
+        "name": "Body",
+        "namespace": "http://schemas.xmlsoap.org/soap/envelope/",
+        "prefix": "soapenv",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "modifyRestChannel": {
+          "$ref": "#/definitions/modifyRestChannel"
+        }
+      },
+      "required": [
+        "modifyRestChannel"
+      ]
+    },
+    "modifyRestChannel": {
+      "title": "modifyRestChannel",
+      "xml": {
+        "name": "modifyRestChannel",
+        "namespace": "http://gemini.bsc.cz/ws/ClientRelated/",
+        "prefix": "cli",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "modifyRestChannelRequest": {
+          "$ref": "#/definitions/modifyRestChannelRequest"
+        }
+      },
+      "required": [
+        "modifyRestChannelRequest"
+      ]
+    },
+    "modifyRestChannelRequest": {
+      "title": "modifyRestChannelRequest",
+      "xml": {
+        "name": "modifyRestChannelRequest",
+        "namespace": "",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "cuid": {
+          "xml": {
+            "name": "cuid",
+            "namespace": "",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "status": {
+          "xml": {
+            "name": "status",
+            "namespace": "",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "cuid",
+        "status"
       ]
     },
     "{{server}}/rest/limitrequest": {
