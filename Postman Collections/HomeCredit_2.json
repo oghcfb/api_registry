@@ -111,7 +111,7 @@
           "application/json"
         ],
         "consumes": [
-          "application/xml"
+          "text/xml"
         ],
         "parameters": [
           {
@@ -237,6 +237,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -281,6 +284,9 @@
         "operationId": "ownAccounts/create",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -329,6 +335,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Content-Type",
@@ -372,6 +381,9 @@
         "operationId": "fromTemplate/create",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -419,6 +431,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -462,6 +477,9 @@
         "operationId": "confirm",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -575,6 +593,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "bot",
@@ -614,6 +635,9 @@
         "operationId": "DELETEpayment/templates",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -750,6 +774,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -795,6 +822,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Content-Type",
@@ -838,6 +868,9 @@
         "operationId": "paymentHistorycopy",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -898,6 +931,9 @@
         "operationId": "creditCardsTransactions",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1092,6 +1128,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -1168,6 +1207,9 @@
         "operationId": "deleteHashtag",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1482,6 +1524,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Authorization",
@@ -1529,6 +1574,9 @@
         "operationId": "confirmPayment",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
