@@ -56,7 +56,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/200"
+              "$ref": "#/definitions/m200"
             },
             "examples": {
               "application/json;charset=UTF-8": {
@@ -1615,8 +1615,8 @@
     }
   },
   "definitions": {
-    "200": {
-      "title": "200",
+    "m200": {
+      "title": "m200",
       "example": {
         "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoiMjE4MDc1MTYiLCJzY29wZSI6WyIvYXBwbGljYXRpb24vdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2Jpa2VyL3YxIiwiL2tsYWRyL3YxIiwiL2VzaWEvdjEiXSwiZXhwIjoxNDk0NTE1NTM5LCJqdGkiOiI4NzJhMWZiNy1iMWExLTRlMmQtYWFhYy0wMTg0ODk2YTdjZjkiLCJjbGllbnRfaWQiOiJpYnMifQ.eT-kM-Msx1D8Dv2nAgkCA0CoSn64AYuoyrj8C78n9w4ISW2XRDKNnuOzUISwb8qZdCpXNhxSTUgAfdYWcemMWdJbkt_xkdD723DEQJYfogsz8NsxjyOiDqZqFUVz0Pn0X2jiJZrMAz_cR08l41SQmx9ZUWWS_32d6C4GHCRi9Ot5XP6RLePuz8unBkJrIEWnermncgOFgUER5vG-Q0uchKH64fha6fRLqo1VCZfh-8139ig9fxHjHOyATg1OLjG0M6q0f_2b5jGnath2VuNKhpuzZq6qJAuPr2OWrf2n7QmgbCM2_5vo1jcHbrSZSvoLEcUOePQe072OdM5wfApmCQ",
         "token_type": "bearer",
