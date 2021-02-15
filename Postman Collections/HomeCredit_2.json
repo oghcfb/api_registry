@@ -54,7 +54,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/m200"
             },
@@ -1440,8 +1440,46 @@
           }
         ],
         "responses": {
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/Categorynotfouund1"
+            },
+            "examples": {
+              "application/json": {
+                "errorMessage": "categoryCode not found",
+                "fieldCode": "categoryCode"
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "type": "string",
+                "default": "no-cache, no-store, max-age=0, must-revalidate"
+              },
+              "Content-Length": {
+                "type": "string",
+                "default": "68"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Thu, 11 May 2017 14:53:21 GMT"
+              },
+              "Expires": {
+                "type": "string",
+                "default": "Wed, 31 Dec 1969 23:59:59 GMT"
+              },
+              "Pragma": {
+                "type": "string",
+                "default": "no-cache"
+              },
+              "X-Powered-By": {
+                "type": "string",
+                "default": "Servlet/2.5 JSP/2.1"
+              }
+            }
+          },
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/onebeneficiary"
             },
@@ -1496,18 +1534,6 @@
                 "default": "Servlet/2.5 JSP/2.1"
               }
             }
-          },
-          "400": {
-            "description": "Bad Request",
-            "schema": {
-              "$ref": "#/definitions/Categorynotfouund"
-            },
-            "examples": {
-              "application/json": {
-                "errorMessage": "categoryCode not found",
-                "fieldCode": "categoryCode"
-              }
-            }
           }
         },
         "security": []
@@ -1553,13 +1579,28 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "",
-            "headers": {}
-          },
           "400": {
             "description": "Bad Request",
-            "schema": {}
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "application/json": {}
+            },
+            "headers": {
+              "Content-Length": {
+                "type": "string",
+                "default": "2"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Thu, 11 May 2017 14:12:00 GMT"
+              },
+              "X-Powered-By": {
+                "type": "string",
+                "default": "Servlet/2.5 JSP/2.1"
+              }
+            }
           }
         },
         "security": []
@@ -2190,8 +2231,8 @@
         "hashtagList"
       ]
     },
-    "Categorynotfouund": {
-      "title": "Categorynotfouund",
+    "Categorynotfouund1": {
+      "title": "Categorynotfouund1",
       "example": {
         "errorMessage": "categoryCode not found",
         "fieldCode": "categoryCode"
