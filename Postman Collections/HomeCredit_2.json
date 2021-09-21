@@ -1582,7 +1582,8 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "type": "object"
+              "type": "object",
+              "default": ""
             },
             "examples": {
               "application/json": {}
