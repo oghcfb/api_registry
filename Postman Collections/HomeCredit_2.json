@@ -117,10 +117,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "text/xml"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -254,10 +251,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -306,10 +300,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -351,10 +342,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -409,10 +397,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -460,10 +445,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -511,10 +493,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -635,10 +614,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           }
@@ -675,10 +651,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -815,10 +788,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -859,10 +829,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -940,10 +907,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           }
@@ -1044,10 +1008,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           }
@@ -1181,10 +1142,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -1265,10 +1223,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -1609,10 +1564,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
@@ -1680,10 +1632,7 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "required": false,
-            "enum": [
-              "application/json"
-            ],
+            "required": true,
             "type": "string",
             "description": ""
           },
