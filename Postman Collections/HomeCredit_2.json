@@ -8,7 +8,7 @@
   "host": "https:",
   "basePath": "//balancer-gateway-it-test2.omni.homecredit.ru:8112/oauth",
   "securityDefinitions": {
-    "auth": {
+    "basic": {
       "type": "basic"
     }
   },
@@ -95,7 +95,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
       }
     },
     "/ClientRelatedWSProxy": {
@@ -139,7 +144,12 @@
             "description": "",
             "headers": {}
           }
-        }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
       }
     },
     "/catalogs/feetype": {
@@ -2520,11 +2530,7 @@
       ]
     }
   },
-  "security": [
-    {
-      "auth": []
-    }
-  ],
+  "security": [],
   "tags": [
     {
       "name": "1_>43>B>28B5;L=K5 H038",
